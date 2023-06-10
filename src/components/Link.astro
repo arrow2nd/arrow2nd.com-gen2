@@ -1,0 +1,18 @@
+---
+import { Icon } from "astro-icon";
+
+interface Props {
+  href: string;
+  icon: string;
+  text: string;
+}
+
+const { href, icon, text } = Astro.props;
+---
+
+<span class="flex flex-row items-center">
+  <Icon class="w-5" name={icon} />
+  <a class="ml-2 text-base tracking-widest hover:underline" href={href}
+    >{text}</a
+  >
+</span>

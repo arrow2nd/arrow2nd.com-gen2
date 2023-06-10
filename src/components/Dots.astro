@@ -1,0 +1,20 @@
+---
+interface Props {
+  count: number;
+  dashed: boolean;
+}
+
+const { count, dashed } = Astro.props;
+---
+
+<div class="space-x-2">
+  {
+    [...Array(count)].map((_, i) => (
+      <span
+        class={`inline-block ${
+          i == 0 && dashed ? "w-12" : "w-2"
+        } h-2 bg-sea rounded-full`}
+      />
+    ))
+  }
+</div>
