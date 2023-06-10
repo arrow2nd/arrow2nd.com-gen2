@@ -1,0 +1,23 @@
+---
+import Layout from "@/layouts/Layout.astro"
+import { getWork, getWorks } from "@/libs/microcms";
+
+export async function getStaticPaths() {
+  const res = await getWorks({ fields: "id", limit: 1000 })
+
+  return res.contents.map(({ id }) => ({
+    params: {
+      id
+    }
+  }))
+}
+
+const { id } = Astro.params;
+const work = await getWork(id as string)
+---
+
+<Layout title={work.title}>
+  <main>
+    <h1>{ work.title }</h1>
+  </main>
+</Layout>

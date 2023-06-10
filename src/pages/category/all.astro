@@ -1,0 +1,31 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getCategories, getWorks } from "@/libs/microcms";
+
+const categories = await getCategories({
+  limit: 100,
+});
+
+const works = await getWorks({
+  fields: ["id", "title"],
+  orders: "-createdAt",
+  limit: 100,
+});
+---
+
+<Layout title="all">
+  <main>
+    <a href="/category/all">all</a>
+    {
+      categories.contents.map(({ name }) => (
+        <a href={`/category/${name}`}>{name}</a>
+      ))
+    }
+    <h1>all</h1>
+    {
+      works.contents.map(({ id, title }) => (
+        <a href={`/works/${id}`}>{title}</a>
+      ))
+    }
+  </main>
+</Layout>
