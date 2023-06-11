@@ -1,5 +1,5 @@
 ---
-import { Image } from "@astrojs/image/components";
+import Carousel from "@/components/Carousel.astro";
 import Dots from "@/components/Dots.astro";
 import Sections from "@/components/Sections.astro";
 import Layout from "@/layouts/Layout.astro"
@@ -29,23 +29,7 @@ const ogpImageUrl = images[0].image.url
   >
   <div class="space-y-6">
     <div>
-      <div class="overflow-hidden border-2 md:rounded-xl">
-        <div class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth">
-          {
-            images.map(({ image, alt }, i) => (
-              <Image
-                class="snap-start"
-                id={`image-${i}`}
-                src={image.url}
-                alt={alt}
-                width={image.width}
-                aspectRatio="16:9"
-                format="webp"
-              />
-            ))
-          }
-        </div>
-      </div>
+      <Carousel images={images} />
       <h1 class="mt-4 font-bold text-2xl">{title}</h1>
       <p class="mt-1">{description}</p>
     </div>

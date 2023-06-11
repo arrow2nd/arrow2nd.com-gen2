@@ -1,0 +1,30 @@
+---
+import { Image } from "@astrojs/image/components";
+import type { Image as WorkImage } from "@/types/work";
+
+export interface Props {
+  images: WorkImage[];
+}
+
+const { images } = Astro.props;
+---
+
+<div
+  class="mx-[calc(50%_-_50vw)] md:mx-0 overflow-hidden border-2 md:rounded-xl"
+>
+  <div class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth">
+    {
+      images.map(({ image, alt }, i) => (
+        <Image
+          class="snap-start"
+          id={`image-${i}`}
+          src={image.url}
+          alt={alt}
+          width={image.width}
+          aspectRatio="16:9"
+          format="webp"
+        />
+      ))
+    }
+  </div>
+</div>
