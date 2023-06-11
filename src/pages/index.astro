@@ -3,8 +3,8 @@ import { Image } from "@astrojs/image/components";
 
 import neko from "@/assets/arrow2nd.svg";
 import Dots from "@/components/Dots.astro";
-import Link from "@/components/Link.astro";
 import Layout from "@/layouts/Layout.astro";
+import NaviLinks from "@/components/NaviLinks.astro";
 ---
 
 <Layout>
@@ -15,8 +15,7 @@ import Layout from "@/layouts/Layout.astro";
       <h1 class="font-bold text-3xl tracking-widest">arrow2nd</h1>
       <Dots count={4} dashed />
       <div class="space-y-2">
-        <Link href="/about" icon="fluent:animal-cat-16-regular" text="about" />
-        <Link href="/category/all" icon="mdi:work-outline" text="works" />
+        <NaviLinks />
       </div>
     </div>
     <Image class="fixed right-0 bottom-0 w-48 md:w-64" src={neko} alt="ねこ" />
