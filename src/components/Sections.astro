@@ -1,0 +1,22 @@
+---
+import type { Section } from "@/types/section";
+
+export interface Props {
+  contents: Section[];
+}
+
+const { contents } = Astro.props;
+---
+
+<div class="space-y-6">
+  {
+    contents.map(({ title, text }) => (
+      <section>
+        <h2 class="mb-1 font-bold text-xl">{title}</h2>
+        {text.split("\n").map((line) => (
+          <p>{line}</p>
+        ))}
+      </section>
+    ))
+  }
+</div>

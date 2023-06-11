@@ -1,0 +1,12 @@
+---
+import Dots from "@/components/Dots.astro";
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<h1 class="mb-4 font-bold text-5xl tracking-widest">{title}</h1>
+<Dots count={4} dashed />

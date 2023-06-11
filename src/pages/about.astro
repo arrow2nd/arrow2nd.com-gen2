@@ -1,20 +1,20 @@
 ---
+import Header from "@/components/Header.astro";
+import Sections from "@/components/Sections.astro";
+import Title from "@/components/Title.astro";
 import Layout from "@/layouts/Layout.astro";
 import { getAboutSections } from "@/libs/microcms";
 
 const about = await getAboutSections();
+console.log(about.contents);
 ---
 
 <Layout title="about">
-  <main>
-    <h1>about</h1>
-    {
-      about.contents.map(({ title, text }) => (
-        <div>
-          <h2>{title}</h2>
-          <span>{text}</span>
-        </div>
-      ))
-    }
+  <Header />
+  <main class="m-auto max-w-screen-lg">
+    <div class="mb-6">
+      <Title title="about" />
+    </div>
+    <Sections contents={about.contents} />
   </main>
 </Layout>
