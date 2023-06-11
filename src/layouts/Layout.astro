@@ -1,17 +1,17 @@
 ---
 import Footer from "@/components/Footer.astro";
-import Header from "@/components/Header.astro";
+import Header, { Props as HeaderProps } from "@/components/Header.astro";
 import BaseLayout from "./BaseLayout.astro";
 
-export interface Props {
+export interface Props extends HeaderProps {
   title: string;
 }
 
-const { title } = Astro.props;
+const { title, backTo } = Astro.props;
 ---
 
 <BaseLayout title={title}>
-  <Header />
+  <Header backTo={backTo} />
   <main class="m-auto max-w-screen-md px-6 md:px-4 lg:px-0 py-4 space-y-8">
     <slot />
   </main>

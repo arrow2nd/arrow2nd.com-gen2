@@ -16,10 +16,10 @@ export async function getStaticPaths() {
 }
 
 const { id } = Astro.params;
-const { title, description, images, sections } = await getWork(id as string)
+const { title, description, images, sections, category } = await getWork(id as string)
 ---
 
-<Layout title={title}>
+<Layout title={title} backTo={`/category/${category.name}`}>
   <div class="space-y-6">
     <div>
       <div class="overflow-hidden border-2 md:rounded-xl">
@@ -33,7 +33,7 @@ const { title, description, images, sections } = await getWork(id as string)
                 alt={alt}
                 width={image.width}
                 aspectRatio="16:9"
-                format={"webp"}
+                format="webp"
               />
             ))
           }
