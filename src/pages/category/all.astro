@@ -1,4 +1,5 @@
 ---
+import Cards from "@/components/Cards.astro";
 import CategoryTab from "@/components/CategoryTab.astro";
 import Title from "@/components/Title.astro";
 import Layout from "@/layouts/Layout.astro";
@@ -9,7 +10,7 @@ const categories = await getCategories({
 });
 
 const works = await getWorks({
-  fields: ["id", "title"],
+  fields: ["id", "title", "description", "images"],
   orders: "-createdAt",
   limit: 100,
 });
@@ -18,11 +19,5 @@ const works = await getWorks({
 <Layout title="all">
   <Title title="works" />
   <CategoryTab current="all" contents={categories.contents} />
-  <div>
-    {
-      works.contents.map(({ id, title }) => (
-        <a href={`/works/${id}`}>{title}</a>
-      ))
-    }
-  </div>
+  <Cards contents={works.contents} />
 </Layout>

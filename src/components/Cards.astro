@@ -1,0 +1,34 @@
+---
+import type { Work } from "@/types/work";
+import { Picture } from "@astrojs/image/components";
+
+export interface Props {
+  contents: Work[];
+}
+
+const { contents } = Astro.props;
+---
+
+<div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+  {
+    contents.map(({ id, title, description, images }) => {
+      const thumbnail = images[0];
+
+      return (
+        <a href={`/works/${id}`}>
+          <div class="border-2 rounded-xl overflow-hidden">
+            <Picture
+              src={thumbnail.image.url}
+              alt={thumbnail.alt}
+              widths={[thumbnail.image.width]}
+              aspectRatio="16:9"
+              formats={["webp"]}
+            />
+          </div>
+          <p class="mt-1 font-bold">{title}</p>
+          <p class="text-sm">{description}</p>
+        </a>
+      );
+    })
+  }
+</div>
