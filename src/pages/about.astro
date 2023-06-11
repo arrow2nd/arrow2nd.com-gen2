@@ -1,4 +1,6 @@
 ---
+import iconImage from "@/assets/icon.png";
+import { Image } from "@astrojs/image/components";
 import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
 import Sections from "@/components/Sections.astro";
@@ -11,9 +13,12 @@ const about = await getAboutSections();
 
 <Layout title="about">
   <Header />
-  <main class="m-auto max-w-screen-md py-4">
-    <div class="mb-6">
-      <Title title="about" />
+  <main class="m-auto max-w-screen-md py-4 space-y-8">
+    <Title title="about" />
+    <div
+      class="flex justify-center w-full md:pt-12 md:bg-white md:border-2 md:rounded-lg"
+    >
+      <Image src={iconImage} alt="アイコン画像" width={256} height={177} />
     </div>
     <Sections contents={about.contents} />
   </main>
