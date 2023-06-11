@@ -1,4 +1,6 @@
 ---
+import CategoryTab from "@/components/CategoryTab.astro";
+import Title from "@/components/Title.astro";
 import Layout from "@/layouts/Layout.astro"
 import { getCategories, getWorks } from "@/libs/microcms";
 
@@ -21,6 +23,9 @@ const categories = await getCategories({
 })
 
 const currentCategory = categories.contents.find(category => category.name === name)
+if (!currentCategory) {
+  throw new Error("カテゴリーが見つかりません")
+}
 
 const works = await getWorks({
   fields: ["id", "title"],
@@ -30,15 +35,14 @@ const works = await getWorks({
 });
 ---
 
-<Layout title={name}>
-  <main>
-    <a href="/category/all">all</a>
-    {categories.contents.map(({ name }) => (<a href={`/category/${name}`}>{name}</a>))}
-    <h1>{name}</h1>
+<Layout title={name || "untitled"}>
+  <Title title="works" />
+  <CategoryTab current={currentCategory.name} contents={categories.contents} />
+  <div>
     {
       works.contents.map(({ id, title }) => (
         <a href={`/works/${id}`}>{title}</a>
       ))
     }
-  </main>
+  </div>
 </Layout>

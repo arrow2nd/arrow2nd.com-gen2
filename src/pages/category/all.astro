@@ -1,4 +1,6 @@
 ---
+import CategoryTab from "@/components/CategoryTab.astro";
+import Title from "@/components/Title.astro";
 import Layout from "@/layouts/Layout.astro";
 import { getCategories, getWorks } from "@/libs/microcms";
 
@@ -14,18 +16,13 @@ const works = await getWorks({
 ---
 
 <Layout title="all">
-  <main>
-    <a href="/category/all">all</a>
-    {
-      categories.contents.map(({ name }) => (
-        <a href={`/category/${name}`}>{name}</a>
-      ))
-    }
-    <h1>all</h1>
+  <Title title="works" />
+  <CategoryTab current="all" contents={categories.contents} />
+  <div>
     {
       works.contents.map(({ id, title }) => (
         <a href={`/works/${id}`}>{title}</a>
       ))
     }
-  </main>
+  </div>
 </Layout>
