@@ -1,11 +1,6 @@
 ---
 import { Icon } from "astro-icon";
-
-interface Props {
-  href: string;
-  icon: string;
-  targetBlank?: boolean;
-}
+export type { Props } from "./Link.astro";
 
 const { href, icon, targetBlank } = Astro.props;
 ---

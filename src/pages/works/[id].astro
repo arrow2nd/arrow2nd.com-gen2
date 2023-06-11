@@ -16,7 +16,7 @@ export async function getStaticPaths() {
 }
 
 const { id } = Astro.params;
-const { title, description, images, sections, category } = await getWork(id!)
+const { title, description, images, sections, links, category } = await getWork(id!)
 const ogpImageUrl = images[0].image.url
 ---
 
@@ -50,6 +50,6 @@ const ogpImageUrl = images[0].image.url
       <p class="mt-1">{description}</p>
     </div>
     <Dots count={4} />
-    <Sections contents={sections} />
+    <Sections contents={sections} links={links} />
   </div>
 </Layout>

@@ -2,7 +2,7 @@ import type { Category } from "./category";
 import type { Section } from "./section";
 
 export type Link = {
-  icon: string[];
+  icon: string;
   href: string;
   text: string;
 };

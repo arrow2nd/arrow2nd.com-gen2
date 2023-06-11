@@ -1,11 +1,15 @@
 ---
 import type { Section } from "@/types/section";
+import type { Link as WorkLink } from "@/types/work";
+import Link from "./Link.astro";
 
 export interface Props {
   contents: Section[];
+  links?: WorkLink[];
 }
 
-const { contents } = Astro.props;
+const { contents, links } = Astro.props;
+const existLinks = links && links.length > 0;
 ---
 
 <div class="space-y-6">
@@ -18,5 +22,17 @@ const { contents } = Astro.props;
         ))}
       </section>
     ))
+  }
+  {
+    existLinks && (
+      <section>
+        <h2 class="mb-1 font-bold text-xl">外部リンク</h2>
+        <div class="space-y-1">
+          {links.map(({ href, icon, text }) => (
+            <Link href={href} icon={`ri:${icon}`} text={text} targetBlank />
+          ))}
+        </div>
+      </section>
+    )
   }
 </div>
