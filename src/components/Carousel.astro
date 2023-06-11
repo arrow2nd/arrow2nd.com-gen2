@@ -14,10 +14,9 @@ const { images } = Astro.props;
 >
   <div class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth">
     {
-      images.map(({ image, alt }, i) => (
+      images.map(({ image, alt }) => (
         <Image
           class="snap-start"
-          id={`image-${i}`}
           src={image.url}
           alt={alt}
           width={image.width}
