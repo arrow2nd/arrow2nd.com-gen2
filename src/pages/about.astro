@@ -1,4 +1,5 @@
 ---
+import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
 import Sections from "@/components/Sections.astro";
 import Title from "@/components/Title.astro";
@@ -11,10 +12,11 @@ console.log(about.contents);
 
 <Layout title="about">
   <Header />
-  <main class="m-auto max-w-screen-lg">
+  <main class="m-auto max-w-screen-md py-4">
     <div class="mb-6">
       <Title title="about" />
     </div>
     <Sections contents={about.contents} />
   </main>
+  <Footer />
 </Layout>

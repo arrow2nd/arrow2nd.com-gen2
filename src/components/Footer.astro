@@ -1,0 +1,21 @@
+---
+import IconLink from "./IconLink.astro";
+const year = new Date().getFullYear();
+---
+
+<div class="flex justify-center w-full m px-6 py-8 text-center space-x-4">
+  <span>{`© ${year} arrow2nd`}</span>
+  <span class="flex ml-4 pl-4 border-l border-main space-x-4">
+    <IconLink
+      icon="ri:github-line"
+      href="https://github.com/arrow2nd"
+      targetBlank
+    />
+    <IconLink
+      icon="ri:mastodon-line"
+      href="https://imastodon.net/@arrow2nd"
+      targetBlank
+    />
+    <IconLink icon="ri:mail-send-line" href="mailto:contact@arrow2nd.com" />
+  </span>
+</div>

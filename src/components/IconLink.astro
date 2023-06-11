@@ -1,0 +1,21 @@
+---
+import { Icon } from "astro-icon";
+
+interface Props {
+  href: string;
+  icon: string;
+  targetBlank?: boolean;
+}
+
+const { href, icon, targetBlank } = Astro.props;
+---
+
+<span class="flex items-center">
+  <a
+    href={href}
+    target={targetBlank ? "_blank" : undefined}
+    rel={targetBlank ? "noopener noreferrer" : undefined}
+  >
+    <Icon class="w-6" name={icon} />
+  </a>
+</span>
