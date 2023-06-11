@@ -1,4 +1,5 @@
 ---
+import { getImage } from '@astrojs/image';
 import { Image } from "@astrojs/image/components";
 import Dots from "@/components/Dots.astro";
 import Sections from "@/components/Sections.astro";
@@ -16,10 +17,24 @@ export async function getStaticPaths() {
 }
 
 const { id } = Astro.params;
-const { title, description, images, sections, category } = await getWork(id as string)
+const { title, description, images, sections, category } = await getWork(id!)
+
+const { src } = await getImage({
+  src: images[0].image.url,
+  width: images[0].image.width,
+  aspectRatio: "16:9",
+  alt: images[0].alt,
+})
+
 ---
 
-<Layout title={title} backTo={`/category/${category.name}`}>
+<Layout 
+  title={title}
+  description={description}
+  imageUrl={src ?? undefined}
+  backTo={`/category/${category.name}`}
+  article
+  >
   <div class="space-y-6">
     <div>
       <div class="overflow-hidden border-2 md:rounded-xl">
