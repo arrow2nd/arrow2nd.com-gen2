@@ -1,0 +1,63 @@
+---
+import "@fontsource/zen-maru-gothic/500.css";
+import "@fontsource/zen-maru-gothic/700.css";
+
+export interface Props {
+  title?: string;
+  description?: string;
+  imageUrl?: string;
+  url?: string;
+  article?: boolean;
+}
+
+const title = Astro.props.title
+  ? `${Astro.props.title} | arrow2nd`
+  : "arrow2nd";
+
+const description =
+  Astro.props.description || "arrow2ndのポートフォリオのようなもの";
+
+const url = new URL(
+  Astro.props.url || "",
+  "https://www.arrow2nd.com/"
+).toString();
+
+const imageUrl =
+  Astro.props.imageUrl ||
+  "https://avatars.githubusercontent.com/u/44780846?v=4";
+
+const { article } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="image" content={imageUrl} />
+
+    <!-- OGP -->
+    <meta property="og:url" content={url} />
+    {article && <meta property="og:type" content="article" />}
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={imageUrl} />
+
+    <!-- Twitter OGP -->
+    <meta
+      name="twitter:card"
+      content={article ? "summary_large_image" : "summary"}
+    />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
+  </head>
+
+  <body class="font-default text-main bg-background">
+    <slot />
+  </body>
+</html>

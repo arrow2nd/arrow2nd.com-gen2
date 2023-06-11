@@ -1,13 +1,12 @@
 ---
 import { Image } from "@astrojs/image/components";
-
 import neko from "@/assets/arrow2nd.svg";
 import Dots from "@/components/Dots.astro";
-import Layout from "@/layouts/Layout.astro";
 import NaviLinks from "@/components/NaviLinks.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 ---
 
-<Layout>
+<BaseLayout>
   <main>
     <div
       class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 space-y-3"
@@ -20,4 +19,4 @@ import NaviLinks from "@/components/NaviLinks.astro";
     </div>
     <Image class="fixed right-0 bottom-0 w-48 md:w-64" src={neko} alt="ねこ" />
   </main>
-</Layout>
+</BaseLayout>
