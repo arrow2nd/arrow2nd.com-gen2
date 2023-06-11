@@ -30,7 +30,7 @@ const works = await getWorks({
 });
 ---
 
-<Layout title={name || "untitled"}>
+<Layout title={name}>
   <main>
     <a href="/category/all">all</a>
     {categories.contents.map(({ name }) => (<a href={`/category/${name}`}>{name}</a>))}
