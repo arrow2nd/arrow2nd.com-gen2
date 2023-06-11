@@ -1,4 +1,7 @@
 ---
+import { Image } from "@astrojs/image/components";
+import Dots from "@/components/Dots.astro";
+import Sections from "@/components/Sections.astro";
 import Layout from "@/layouts/Layout.astro"
 import { getWork, getWorks } from "@/libs/microcms";
 
@@ -13,11 +16,33 @@ export async function getStaticPaths() {
 }
 
 const { id } = Astro.params;
-const work = await getWork(id as string)
+const { title, description, images, sections } = await getWork(id as string)
 ---
 
-<Layout title={work.title}>
-  <main>
-    <h1>{ work.title }</h1>
-  </main>
+<Layout title={title}>
+  <div class="space-y-6">
+    <div>
+      <div class="overflow-hidden border-2 md:rounded-xl">
+        <div class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth">
+          {
+            images.map(({ image, alt }, i) => (
+              <Image
+                class="snap-start"
+                id={`image-${i}`}
+                src={image.url}
+                alt={alt}
+                width={image.width}
+                aspectRatio="16:9"
+                format={"webp"}
+              />
+            ))
+          }
+        </div>
+      </div>
+      <h1 class="mt-4 font-bold text-2xl">{title}</h1>
+      <p class="mt-1">{description}</p>
+    </div>
+    <Dots count={4} />
+    <Sections contents={sections} />
+  </div>
 </Layout>
