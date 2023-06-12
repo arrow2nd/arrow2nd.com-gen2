@@ -1,6 +1,7 @@
 ---
 import { Image } from "@astrojs/image/components";
 import type { Image as WorkImage } from "@/types/work";
+import Icon from "astro-icon";
 
 export interface Props {
   images: WorkImage[];
@@ -10,9 +11,12 @@ const { images } = Astro.props;
 ---
 
 <div
-  class="mx-[calc(50%_-_50vw)] md:mx-0 overflow-hidden border-2 md:rounded-xl"
+  class="relative mx-[calc(50%_-_50vw)] md:mx-0 overflow-hidden border-2 md:rounded-xl"
 >
-  <div class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth">
+  <div
+    class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth"
+    id="carousel"
+  >
     {
       images.map(({ image, alt }) => (
         <Image
@@ -23,8 +27,55 @@ const { images } = Astro.props;
           height={image.height}
           aspectRatio="16:9"
           format="webp"
+          loading="eager"
         />
       ))
     }
   </div>
+
+  <button
+    class="absolute top-0 bottom-0 left-0 w-8 m-auto transition-opacity hover:opacity-20"
+    id="prev"
+  >
+    <Icon name="ri:arrow-drop-left-line" />
+  </button>
+
+  <button
+    class="absolute top-0 bottom-0 right-0 w-8 m-auto transition-opacity hover:opacity-20"
+    id="next"
+  >
+    <Icon name="ri:arrow-drop-right-line" />
+  </button>
 </div>
+
+<script>
+  window.onload = () => {
+    const carousel = document.getElementById("carousel") as HTMLDivElement;
+    const maxIndex = Math.round(carousel.scrollWidth / carousel.clientWidth);
+
+    const getIndex = (): number => {
+      return Math.round(carousel.scrollLeft / carousel.clientWidth);
+    };
+
+    const goto = (index: number): void => {
+      const i = (index + maxIndex) % maxIndex;
+      carousel.children[i].scrollIntoView({
+        block: "center",
+        behavior: "smooth",
+      });
+    };
+
+    const prev = document.getElementById("prev") as HTMLButtonElement;
+    prev.onclick = () => {
+      goto(getIndex() - 1);
+    };
+
+    const next = document.getElementById("next") as HTMLButtonElement;
+    next.onclick = () => {
+      goto(getIndex() + 1);
+    };
+
+    // 1枚目の画像までスクロール
+    goto(0);
+  };
+</script>
