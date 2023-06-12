@@ -8,6 +8,7 @@ export interface Props {
 }
 
 const { images } = Astro.props;
+const multiple = images.length > 1;
 ---
 
 <div
@@ -33,19 +34,27 @@ const { images } = Astro.props;
     }
   </div>
 
-  <button
-    class="absolute top-0 bottom-0 left-0 w-8 m-auto transition-opacity hover:opacity-20"
-    id="prev"
-  >
-    <Icon name="ri:arrow-drop-left-line" />
-  </button>
+  {
+    multiple && (
+      <button
+        class="absolute top-0 bottom-0 left-0 w-8 m-auto transition-opacity hover:opacity-20"
+        id="prev"
+      >
+        <Icon name="ri:arrow-drop-left-line" />
+      </button>
+    )
+  }
 
-  <button
-    class="absolute top-0 bottom-0 right-0 w-8 m-auto transition-opacity hover:opacity-20"
-    id="next"
-  >
-    <Icon name="ri:arrow-drop-right-line" />
-  </button>
+  {
+    multiple && (
+      <button
+        class="absolute top-0 bottom-0 right-0 w-8 m-auto transition-opacity hover:opacity-20"
+        id="next"
+      >
+        <Icon name="ri:arrow-drop-right-line" />
+      </button>
+    )
+  }
 </div>
 
 <script>
