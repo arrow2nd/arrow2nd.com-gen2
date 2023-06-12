@@ -12,11 +12,19 @@ const contents = [{ name: "all" }, ...Astro.props.contents];
 
 <div class="flex space-x-4 tracking-widest">
   {
-    contents.map(({ name }) => (
-      <span class="transition-transform duration-200 hover:scale-90">
-        <a href={`/category/${name}`}>{name}</a>
-        {name === current && <div class="h-1 mt-1 bg-sea rounded-full" />}
-      </span>
-    ))
+    contents.map(({ name }) => {
+      const isCurrent = name === current;
+
+      return (
+        <span
+          class={`${
+            isCurrent ? "brightness-100" : "brightness-200"
+          } transition hover:brightness-100`}
+        >
+          <a href={`/category/${name}`}>{name}</a>
+          {isCurrent && <div class="h-1 mt-1 bg-sea rounded-full" />}
+        </span>
+      );
+    })
   }
 </div>

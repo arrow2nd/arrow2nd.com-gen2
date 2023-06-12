@@ -15,7 +15,7 @@ const { contents } = Astro.props;
       const thumbnail = images[0];
 
       return (
-        <a class="transition-transform duration-300 hover:scale-95" href={`/works/${id}`}>
+        <a href={`/works/${id}`}>
           <div class="border-2 rounded-xl overflow-hidden">
             <Picture
               src={thumbnail.image.url}
@@ -25,7 +25,7 @@ const { contents } = Astro.props;
               formats={["webp"]}
             />
           </div>
-          <p class="mt-1 font-bold hover:underline">{title}</p>
+          <p class="mt-2 font-bold hover:underline">{title}</p>
           <p class="text-sm">{description}</p>
         </a>
       );
