@@ -5,12 +5,11 @@ export type { Props } from "./Link.astro";
 const { href, icon, targetBlank } = Astro.props;
 ---
 
-<span class="flex items-center">
-  <a
-    href={href}
-    target={targetBlank ? "_blank" : undefined}
-    rel={targetBlank ? "noopener noreferrer" : undefined}
-  >
-    <Icon class="w-6" name={icon} />
-  </a>
-</span>
+<a
+  class="flex items-center transition-transform duration-200 hover:scale-90"
+  href={href}
+  target={targetBlank ? "_blank" : undefined}
+  rel={targetBlank ? "noopener noreferrer" : undefined}
+>
+  <Icon class="w-6" name={icon} />
+</a>
