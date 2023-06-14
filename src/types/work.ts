@@ -20,7 +20,6 @@ export type Work = {
   id: string;
   images: Image[];
   category: Category;
-  categories: Category[];
   title: string;
   description: string;
   sections: Section[];
