@@ -2,13 +2,14 @@
 import Icon from "astro-icon";
 
 export interface Props {
+  basePath: string;
   currentPage: number;
   lastPage: number;
   previousPage?: string;
   nextPage?: string;
 }
 
-const { currentPage, lastPage, previousPage, nextPage } = Astro.props;
+const { basePath, currentPage, lastPage, previousPage, nextPage } = Astro.props;
 ---
 
 <div class="flex justify-center items-center pt-12 text-base space-x-4">
@@ -27,7 +28,7 @@ const { currentPage, lastPage, previousPage, nextPage } = Astro.props;
       const path = i === 0 ? "" : pageNum;
 
       return (
-        <a class={className} href={`/category/all/${path}`}>
+        <a class={className} href={`${basePath}/${path}`}>
           {pageNum}
         </a>
       );
