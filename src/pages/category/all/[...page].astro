@@ -1,6 +1,7 @@
 ---
 import Cards from "@/components/Cards.astro";
 import CategoryTab from "@/components/CategoryTab.astro";
+import Pagination from "@/components/Pagination.astro";
 import Title from "@/components/Title.astro";
 import Layout from "@/layouts/Layout.astro";
 import { getCategories, getWorks } from "@/libs/microcms";
@@ -21,16 +22,20 @@ const categories = await getCategories({
 });
 
 const { page } = Astro.props;
-
 ---
 
 <Layout title="all">
   <Title title="works" />
   <CategoryTab current="all" contents={categories.contents} />
   <Cards contents={page.data} />
-  <div>
-    <p>page {page.currentPage}/{page.lastPage}</p>
-    {page.url.prev && <a href={page.url.prev}>prev</a>}
-    {page.url.next && <a href={page.url.next}>next</a>}
-  </div>
+  {
+    page.lastPage > 1 && (
+      <Pagination
+        currentPage={page.currentPage}
+        lastPage={page.lastPage}
+        previousPage={page.url.prev}
+        nextPage={page.url.next}
+      />
+    )
+  }
 </Layout>

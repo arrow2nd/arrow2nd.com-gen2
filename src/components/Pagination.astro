@@ -1,0 +1,43 @@
+---
+import Icon from "astro-icon";
+
+export interface Props {
+  currentPage: number;
+  lastPage: number;
+  previousPage?: string;
+  nextPage?: string;
+}
+
+const { currentPage, lastPage, previousPage, nextPage } = Astro.props;
+---
+
+<div class="flex justify-center items-center pt-12 text-base space-x-4">
+  {
+    previousPage && (
+      <a class="text-background bg-sea rounded-full" href={previousPage}>
+        <Icon class="w-8" name="ri:arrow-drop-left-line" />
+      </a>
+    )
+  }
+  {
+    [...Array(lastPage)].map((_, i) => {
+      const pageNum = i + 1;
+      const className =
+        pageNum === currentPage ? "font-bold text-sea" : "hover:underline";
+      const path = i === 0 ? "" : pageNum;
+
+      return (
+        <a class={className} href={`/category/all/${path}`}>
+          {pageNum}
+        </a>
+      );
+    })
+  }
+  {
+    nextPage && (
+      <a class="text-background bg-sea rounded-full" href={nextPage}>
+        <Icon class="w-8" name="ri:arrow-drop-right-line" />
+      </a>
+    )
+  }
+</div>
