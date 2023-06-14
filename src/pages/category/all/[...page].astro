@@ -31,7 +31,7 @@ const { page } = Astro.props;
   {
     page.lastPage > 1 && (
       <Pagination
-        basePath="category/all"
+        basePath="/category/all"
         currentPage={page.currentPage}
         lastPage={page.lastPage}
         previousPage={page.url.prev}
