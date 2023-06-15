@@ -16,7 +16,7 @@ export async function getStaticPaths() {
 }
 
 const { id } = Astro.params;
-const { title, description, images, sections, links, category } = await getWork(id!)
+const { title, description, images, sections, links } = await getWork(id!)
 const ogpImageUrl = images[0].image.url
 ---
 
@@ -24,7 +24,6 @@ const ogpImageUrl = images[0].image.url
   title={title}
   description={description}
   imageUrl={ogpImageUrl}
-  backTo={`/category/${category.name}`}
   article
   >
   <div class="space-y-6">
