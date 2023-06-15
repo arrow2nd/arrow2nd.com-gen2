@@ -16,7 +16,7 @@ const { contents } = Astro.props;
 
       return (
         <a href={`/works/${id}`}>
-          <div class="border-2 rounded-xl overflow-hidden">
+          <div class="border-2 rounded-xl overflow-hidden aspect-video">
             <Picture
               src={thumbnail.image.url}
               alt={thumbnail.alt}
