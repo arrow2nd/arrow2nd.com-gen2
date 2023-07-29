@@ -8,6 +8,7 @@ module.exports = {
       },
       colors: {
         main: "#434343",
+        sub: "#595959",
         background: "#FBFBFB",
         sea: "#45A3CC",
       },

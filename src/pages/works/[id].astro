@@ -2,35 +2,30 @@
 import Carousel from "@/components/Carousel.astro";
 import Dots from "@/components/Dots.astro";
 import Sections from "@/components/Sections.astro";
-import Layout from "@/layouts/Layout.astro"
+import Layout from "@/layouts/Layout.astro";
 import { getWork, getWorks } from "@/libs/microcms";
 
 export async function getStaticPaths() {
-  const res = await getWorks({ fields: "id", limit: 1000 })
+  const res = await getWorks({ fields: "id", limit: 1000 });
 
   return res.contents.map(({ id }) => ({
     params: {
-      id
-    }
-  }))
+      id,
+    },
+  }));
 }
 
 const { id } = Astro.params;
-const { title, description, images, sections, links } = await getWork(id!)
-const ogpImageUrl = images[0].image.url
+const { title, description, images, sections, links } = await getWork(id!);
+const ogpImageUrl = images[0].image.url;
 ---
 
-<Layout 
-  title={title}
-  description={description}
-  imageUrl={ogpImageUrl}
-  article
-  >
+<Layout title={title} description={description} imageUrl={ogpImageUrl} article>
   <div class="space-y-6">
     <div>
       <Carousel images={images} />
       <h1 class="mt-4 font-bold text-2xl">{title}</h1>
-      <p class="mt-1">{description}</p>
+      <p class="mt-1 text-sub">{description}</p>
     </div>
     <Dots count={4} />
     <Sections contents={sections} links={links} />
