@@ -12,11 +12,13 @@ const { href, icon, text, targetBlank } = Astro.props;
 ---
 
 <span class="flex items-center">
-  <Icon class="w-5" name={icon} />
   <a
-    class="ml-2 text-base tracking-widest hover:underline"
+    class="flex hover:underline"
     href={href}
     target={targetBlank ? "_blank" : undefined}
-    rel={targetBlank ? "noopener noreferrer" : undefined}>{text}</a
+    rel={targetBlank ? "noopener noreferrer" : undefined}
   >
+    <Icon class="w-5" name={icon} />
+    <span class="ml-2 text-base tracking-widest">{text}</span>
+  </a>
 </span>
