@@ -1,6 +1,6 @@
 ---
 import type { Work } from "@/types/work";
-import { Picture } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 
 export interface Props {
   contents: Work[];
@@ -17,12 +17,12 @@ const { contents } = Astro.props;
       return (
         <a href={`/works/${id}`}>
           <div class="border-2 rounded-xl overflow-hidden aspect-video">
-            <Picture
+            <Image
               src={thumbnail.image.url}
               alt={thumbnail.alt}
-              widths={[thumbnail.image.width]}
-              aspectRatio="16:9"
-              formats={["webp"]}
+              width={thumbnail.image.width}
+              height={thumbnail.image.height}
+              format={"webp"}
             />
           </div>
           <p class="mt-2 font-bold hover:underline">{title}</p>
