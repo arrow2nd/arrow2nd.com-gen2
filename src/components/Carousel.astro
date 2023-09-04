@@ -1,5 +1,5 @@
 ---
-import { Image } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 import type { Image as WorkImage } from "@/types/work";
 import Icon from "astro-icon";
 
@@ -26,7 +26,6 @@ const multiple = images.length > 1;
           alt={alt}
           width={image.width}
           height={image.height}
-          aspectRatio="16:9"
           format="webp"
           loading="eager"
         />
