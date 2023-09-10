@@ -6,7 +6,7 @@ const { href, icon, targetBlank } = Astro.props;
 ---
 
 <a
-  class="flex items-center"
+  class="flex items-center hover:text-sea transition-colors"
   href={href}
   target={targetBlank ? "_blank" : undefined}
   rel={targetBlank ? "noopener noreferrer" : undefined}

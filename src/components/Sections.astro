@@ -16,7 +16,7 @@ const existLinks = links && links.length > 0;
   {
     contents.map(({ title, text }) => (
       <section>
-        <h2 class="mb-1.5 font-bold text-xl">{title}</h2>
+        <h2 class="mb-2 font-bold text-xl">{title}</h2>
         {text.split("\n").map((line) => (
           <p class="text-sub">{line}</p>
         ))}
@@ -26,8 +26,8 @@ const existLinks = links && links.length > 0;
   {
     existLinks && (
       <section>
-        <h2 class="mb-1.5 font-bold text-xl">外部リンク</h2>
-        <div class="md:flex md:flex-wrap space-y-1 md:space-x-4">
+        <h2 class="mb-2 font-bold text-xl">外部リンク</h2>
+        <div class="md:flex md:flex-wrap space-y-1 md:space-y-0 md:space-x-4">
           {links.map(({ href, icon, text }) => (
             <Link href={href} icon={`ri:${icon}`} text={text} targetBlank />
           ))}

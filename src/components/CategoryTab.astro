@@ -18,7 +18,7 @@ const contents = [{ name: "all" }, ...Astro.props.contents];
       return (
         <span
           class={`${
-            isCurrent ? "brightness-100" : "brightness-200"
+            isCurrent ? "brightness-100" : "brightness-200 hover:text-sea"
           } transition hover:brightness-100`}
         >
           <a href={`/category/${name}`}>{name}</a>
