@@ -41,7 +41,7 @@ const isMultiple = images.length > 1;
       watch-slides-progress="true"
     >
       {images.map(({ image, alt }) => (
-        <swiper-slide class="border-2">
+        <swiper-slide class="border-2 transition-colors cursor-pointer">
           <Image
             src={image.url}
             alt={alt}
@@ -59,6 +59,10 @@ const isMultiple = images.length > 1;
 <style>
   #thumbs swiper-slide {
     opacity: 0.5;
+  }
+
+  #thumbs swiper-slide:hover {
+    border-color: #45a3cc; /* border-sea */
   }
 
   #thumbs .swiper-slide-thumb-active {
