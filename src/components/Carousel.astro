@@ -1,27 +1,24 @@
 ---
 import { Image } from "astro:assets";
 import type { Image as WorkImage } from "@/types/work";
-import Icon from "astro-icon";
 
 export interface Props {
   images: WorkImage[];
 }
 
 const { images } = Astro.props;
-const multiple = images.length > 1;
+const isMultiple = images.length > 1;
 ---
 
-<div
-  class="relative mx-[calc(50%_-_50vw)] md:mx-0 overflow-hidden border-2 md:rounded-xl aspect-video"
+<swiper-container
+  class="relative mx-[calc(50%_-_50vw)] border-y-2 md:border-2 md:mx-0 aspect-video"
+  loop="true"
+  thumbs-swiper={isMultiple && "#thumbs"}
 >
-  <div
-    class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth"
-    id="carousel"
-  >
-    {
-      images.map(({ image, alt }) => (
+  {
+    images.map(({ image, alt }) => (
+      <swiper-slide>
         <Image
-          class="snap-start"
           src={image.url}
           alt={alt}
           width={image.width}
@@ -29,61 +26,47 @@ const multiple = images.length > 1;
           format="webp"
           loading="eager"
         />
-      ))
-    }
-  </div>
+      </swiper-slide>
+    ))
+  }
+</swiper-container>
 
-  {
-    multiple && (
-      <button
-        class="absolute top-0 bottom-0 left-0 w-8 m-auto transition-opacity hover:opacity-20"
-        id="prev"
-      >
-        <Icon name="ri:arrow-drop-left-line" />
-      </button>
-    )
+{
+  isMultiple && (
+    <swiper-container
+      class="mt-4 w-full"
+      id="thumbs"
+      space-between="8"
+      slides-per-view="6"
+      watch-slides-progress="true"
+    >
+      {images.map(({ image, alt }) => (
+        <swiper-slide class="border-2">
+          <Image
+            src={image.url}
+            alt={alt}
+            width={image.width * 0.1}
+            height={image.height * 0.1}
+            format="webp"
+            loading="eager"
+          />
+        </swiper-slide>
+      ))}
+    </swiper-container>
+  )
+}
+
+<style>
+  #thumbs swiper-slide {
+    opacity: 0.5;
   }
 
-  {
-    multiple && (
-      <button
-        class="absolute top-0 bottom-0 right-0 w-8 m-auto transition-opacity hover:opacity-20"
-        id="next"
-      >
-        <Icon name="ri:arrow-drop-right-line" />
-      </button>
-    )
+  #thumbs .swiper-slide-thumb-active {
+    opacity: 1;
   }
-</div>
+</style>
 
 <script>
-  window.onload = () => {
-    const carousel = document.getElementById("carousel") as HTMLDivElement;
-    const maxIndex = Math.round(carousel.scrollWidth / carousel.clientWidth);
-
-    const getIndex = (): number => {
-      return Math.round(carousel.scrollLeft / carousel.clientWidth);
-    };
-
-    const goto = (index: number): void => {
-      const i = (index + maxIndex) % maxIndex;
-      carousel.children[i].scrollIntoView({
-        block: "center",
-        behavior: "smooth",
-      });
-    };
-
-    const prev = document.getElementById("prev") as HTMLButtonElement;
-    prev.onclick = () => {
-      goto(getIndex() - 1);
-    };
-
-    const next = document.getElementById("next") as HTMLButtonElement;
-    next.onclick = () => {
-      goto(getIndex() + 1);
-    };
-
-    // 1枚目の画像までスクロール
-    goto(0);
-  };
+  import { register } from "swiper/element/bundle";
+  register();
 </script>
