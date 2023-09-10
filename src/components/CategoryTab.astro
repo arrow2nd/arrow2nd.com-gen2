@@ -22,7 +22,7 @@ const contents = [{ name: "all" }, ...Astro.props.contents];
           } transition hover:brightness-100`}
         >
           <a href={`/category/${name}`}>{name}</a>
-          {isCurrent && <div class="h-1 mt-1 bg-sea rounded-full" />}
+          {isCurrent && <div class="mt-1 h-1 rounded-full bg-sea" />}
         </span>
       );
     })

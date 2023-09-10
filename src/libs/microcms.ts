@@ -1,11 +1,12 @@
+import { type MicroCMSQueries, createClient } from "microcms-js-sdk";
+
 import type { Category } from "@/types/category";
 import type { Section } from "@/types/section";
 import type { Work } from "@/types/work";
-import { createClient, MicroCMSQueries } from "microcms-js-sdk";
 
 const client = createClient({
   serviceDomain: import.meta.env.MICROCMS_SERVICE_DOMAIN,
-  apiKey: import.meta.env.MICROCMS_API_KEY,
+  apiKey: import.meta.env.MICROCMS_API_KEY
 });
 
 /**
@@ -15,7 +16,7 @@ const client = createClient({
 export const getAboutSections = async () => {
   return await client.getList<Section>({
     endpoint: "about",
-    queries: { limit: 100 },
+    queries: { limit: 100 }
   });
 };
 
@@ -26,7 +27,7 @@ export const getAboutSections = async () => {
 export const getCategories = async (queries?: MicroCMSQueries) => {
   return await client.getList<Category>({
     endpoint: "category",
-    queries,
+    queries
   });
 };
 
@@ -38,7 +39,7 @@ export const getCategories = async (queries?: MicroCMSQueries) => {
 export const getWorks = async (queries?: MicroCMSQueries) => {
   return await client.getList<Work>({
     endpoint: "works",
-    queries,
+    queries
   });
 };
 
@@ -50,6 +51,6 @@ export const getWorks = async (queries?: MicroCMSQueries) => {
 export const getWork = async (contentId: string) => {
   return await client.getListDetail<Work>({
     endpoint: "works",
-    contentId,
+    contentId
   });
 };
