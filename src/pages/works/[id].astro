@@ -10,8 +10,8 @@ export async function getStaticPaths() {
 
   return res.contents.map(({ id }) => ({
     params: {
-      id,
-    },
+      id
+    }
   }));
 }
 

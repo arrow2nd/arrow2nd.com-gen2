@@ -3,37 +3,39 @@ import Cards from "@/components/Cards.astro";
 import CategoryTab from "@/components/CategoryTab.astro";
 import Pagination from "@/components/Pagination.astro";
 import Title from "@/components/Title.astro";
-import Layout from "@/layouts/Layout.astro"
+import Layout from "@/layouts/Layout.astro";
 import { getCategories, getWorks } from "@/libs/microcms";
 import type { GetStaticPathsOptions } from "astro";
 
 export const getStaticPaths = async ({ paginate }: GetStaticPathsOptions) => {
   const categories = await getCategories({
     fields: "name"
-  })
+  });
 
   const allWorks = await getWorks({
     fields: ["id", "title", "description", "images", "category"],
     orders: "-createdAt",
-    limit: 100,
+    limit: 100
   });
 
   return categories.contents.flatMap(({ name }) => {
-    const works = allWorks.contents.filter(work => work.category.name === name)
+    const works = allWorks.contents.filter(
+      (work) => work.category.name === name
+    );
 
     return paginate(works, {
       params: { name },
       props: { categories: categories.contents },
       pageSize: 12
-    })
-  })
-}
+    });
+  });
+};
 
 const { name } = Astro.params;
-const { page, categories } = Astro.props
+const { page, categories } = Astro.props;
 
 if (!name) {
-  throw new Error("nameがありません")
+  throw new Error("nameがありません");
 }
 ---
 
