@@ -18,10 +18,10 @@ const { contents } = Astro.props;
         <a class="transition-colors hover:text-sea" href={`/works/${id}`}>
           <div class="aspect-video overflow-hidden rounded-xl border-2">
             <Image
-              src={thumbnail.image.url}
-              alt={thumbnail.alt}
-              width={thumbnail.image.width}
-              height={thumbnail.image.height}
+              src={thumbnail.src}
+              alt={thumbnail.altText}
+              width={thumbnail.width}
+              height={thumbnail.height}
               format={"webp"}
             />
           </div>

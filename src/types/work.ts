@@ -8,12 +8,10 @@ export type Link = {
 };
 
 export type Image = {
-  image: {
-    url: string;
-    width: number;
-    height: number;
-  };
-  alt: string;
+  altText: string;
+  src: string;
+  width: number;
+  height: number;
 };
 
 export type Work = {

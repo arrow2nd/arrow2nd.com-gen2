@@ -4,29 +4,23 @@ import CategoryTab from "@/components/CategoryTab.astro";
 import Pagination from "@/components/Pagination.astro";
 import Title from "@/components/Title.astro";
 import Layout from "@/layouts/Layout.astro";
-import { getCategories, getWorks } from "@/libs/microcms";
+import { getCategories, getAllWorks } from "@/libs/newt";
 import type { GetStaticPathsOptions } from "astro";
 
 export const getStaticPaths = async ({ paginate }: GetStaticPathsOptions) => {
-  const works = await getWorks({
-    fields: ["id", "title", "description", "images"],
-    orders: "-createdAt",
-    limit: 100
-  });
+  const works = await getAllWorks(["id", "title", "description", "images"]);
 
-  return paginate(works.contents, { pageSize: 12 });
+  return paginate(works, { pageSize: 12 });
 };
 
-const categories = await getCategories({
-  limit: 100
-});
+const categories = await getCategories();
 
 const { page } = Astro.props;
 ---
 
 <Layout title="all">
   <Title title="works" />
-  <CategoryTab current="all" contents={categories.contents} />
+  <CategoryTab current="all" contents={categories} />
   <Cards contents={page.data} />
   {
     page.lastPage > 1 && (
