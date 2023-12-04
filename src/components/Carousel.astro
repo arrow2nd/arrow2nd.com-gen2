@@ -12,17 +12,18 @@ const isMultiple = images.length > 1;
 
 <swiper-container
   class="relative mx-[calc(50%_-_50vw)] aspect-video border-y-2 md:mx-0 md:border-2"
-  loop="true"
+  loop={isMultiple}
+  autoplay-delay={isMultiple && "8000"}
   thumbs-swiper={isMultiple && "#thumbs"}
 >
   {
-    images.map(({ image, alt }) => (
+    images.map(({ src, altText, width, height }) => (
       <swiper-slide>
         <Image
-          src={image.url}
-          alt={alt}
-          width={image.width}
-          height={image.height}
+          src={src}
+          alt={altText}
+          width={width}
+          height={height}
           format="webp"
           loading="eager"
         />
@@ -40,13 +41,13 @@ const isMultiple = images.length > 1;
       slides-per-view="6"
       watch-slides-progress="true"
     >
-      {images.map(({ image, alt }) => (
+      {images.map(({ src, altText, width, height }) => (
         <swiper-slide class="cursor-pointer border-2 transition-colors">
           <Image
-            src={image.url}
-            alt={alt}
-            width={image.width * 0.1}
-            height={image.height * 0.1}
+            src={src}
+            alt={altText}
+            width={width * 0.1}
+            height={height * 0.1}
             format="webp"
             loading="eager"
           />

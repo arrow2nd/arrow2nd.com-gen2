@@ -1,10 +1,11 @@
 ---
-import iconImage from "@/assets/icon.png";
 import { Image } from "astro:assets";
+
+import iconImage from "@/assets/icon.png";
 import Sections from "@/components/Sections.astro";
 import Title from "@/components/Title.astro";
 import Layout from "@/layouts/Layout.astro";
-import { getAboutSections } from "@/libs/microcms";
+import { getAboutSections } from "@/libs/newt";
 
 const about = await getAboutSections();
 ---
@@ -16,5 +17,5 @@ const about = await getAboutSections();
   >
     <Image src={iconImage} alt="アイコン画像" width={256} height={177} />
   </div>
-  <Sections contents={about.contents} />
+  <Sections contents={about} />
 </Layout>

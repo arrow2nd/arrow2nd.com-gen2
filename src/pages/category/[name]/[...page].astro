@@ -1,31 +1,31 @@
 ---
+import type { GetStaticPathsOptions } from "astro";
+
 import Cards from "@/components/Cards.astro";
 import CategoryTab from "@/components/CategoryTab.astro";
 import Pagination from "@/components/Pagination.astro";
 import Title from "@/components/Title.astro";
 import Layout from "@/layouts/Layout.astro";
-import { getCategories, getWorks } from "@/libs/microcms";
-import type { GetStaticPathsOptions } from "astro";
+
+import { getCategories, getAllWorks } from "@/libs/newt";
 
 export const getStaticPaths = async ({ paginate }: GetStaticPathsOptions) => {
-  const categories = await getCategories({
-    fields: "name"
-  });
+  const categories = await getCategories();
 
-  const allWorks = await getWorks({
-    fields: ["id", "title", "description", "images", "category"],
-    orders: "-createdAt",
-    limit: 100
-  });
+  const allWorks = await getAllWorks([
+    "id",
+    "title",
+    "description",
+    "images",
+    "category"
+  ]);
 
-  return categories.contents.flatMap(({ name }) => {
-    const works = allWorks.contents.filter(
-      (work) => work.category.name === name
-    );
+  return categories.flatMap(({ name }) => {
+    const works = allWorks.filter((work) => work.category.name === name);
 
     return paginate(works, {
       params: { name },
-      props: { categories: categories.contents },
+      props: { categories },
       pageSize: 12
     });
   });

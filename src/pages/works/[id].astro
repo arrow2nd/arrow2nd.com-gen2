@@ -1,23 +1,23 @@
 ---
+import type { Work } from "@/types/work";
+
 import Carousel from "@/components/Carousel.astro";
 import Dots from "@/components/Dots.astro";
 import Sections from "@/components/Sections.astro";
 import Layout from "@/layouts/Layout.astro";
-import { getWork, getWorks } from "@/libs/microcms";
+import { getAllWorks } from "@/libs/newt";
 
 export async function getStaticPaths() {
-  const res = await getWorks({ fields: "id", limit: 1000 });
+  const works = await getAllWorks();
 
-  return res.contents.map(({ id }) => ({
-    params: {
-      id
-    }
+  return works.map((work) => ({
+    params: { id: work.id },
+    props: work
   }));
 }
 
-const { id } = Astro.params;
-const { title, description, images, sections, links } = await getWork(id!);
-const ogpImageUrl = images[0].image.url;
+const { title, description, images, sections, links } = Astro.props as Work;
+const ogpImageUrl = images[0].src;
 ---
 
 <Layout title={title} description={description} imageUrl={ogpImageUrl} article>
