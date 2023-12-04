@@ -12,7 +12,7 @@ const isMultiple = images.length > 1;
 
 <swiper-container
   class="relative mx-[calc(50%_-_50vw)] aspect-video border-y-2 md:mx-0 md:border-2"
-  loop="true"
+  loop={isMultiple}
   autoplay-delay={isMultiple && "8000"}
   thumbs-swiper={isMultiple && "#thumbs"}
 >
