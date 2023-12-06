@@ -11,7 +11,7 @@
   "dependencies": {
     "@astrojs/tailwind": "^5.0.0",
     "@fontsource/zen-maru-gothic": "^5.0.7",
-    "astro": "^3.0.7",
+    "astro": "^4.0.0",
     "astro-icon": "^0.8.1",
     "newt-client-js": "^3.2.8",
     "swiper": "^11.0.0",
