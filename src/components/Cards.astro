@@ -16,7 +16,10 @@ const { contents } = Astro.props;
 
       return (
         <a class="transition-colors hover:text-sea" href={`/works/${id}`}>
-          <div class="aspect-video overflow-hidden rounded-xl border-2">
+          <div
+            class="aspect-video overflow-hidden rounded-xl border-2"
+            transition:name={thumbnail.src}
+          >
             <Image
               src={thumbnail.src}
               alt={thumbnail.altText}

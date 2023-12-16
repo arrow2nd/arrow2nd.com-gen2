@@ -15,6 +15,8 @@ const isMultiple = images.length > 1;
   loop={isMultiple}
   autoplay-delay={isMultiple && "8000"}
   thumbs-swiper={isMultiple && "#thumbs"}
+  transition:name={images[0].src}
+  transition:animate="initial"
 >
   {
     images.map(({ src, altText, width, height }) => (
