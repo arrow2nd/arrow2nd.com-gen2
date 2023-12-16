@@ -28,8 +28,12 @@ const { contents } = Astro.props;
               format={"webp"}
             />
           </div>
-          <p class="mt-2 font-bold">{title}</p>
-          <p class="text-sm text-sub">{description}</p>
+          <p class="mt-2 font-bold" transition:name={title}>
+            {title}
+          </p>
+          <p class="text-sm text-sub" transition:name={description}>
+            {description}
+          </p>
         </a>
       );
     })

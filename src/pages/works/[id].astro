@@ -24,8 +24,20 @@ const ogpImageUrl = images[0].src;
   <div class="space-y-6">
     <div>
       <Carousel images={images} />
-      <h1 class="mt-4 font-bold text-2xl">{title}</h1>
-      <p class="mt-1 text-sub">{description}</p>
+      <h1
+        class="mt-4 font-bold text-2xl"
+        transition:name={title}
+        transition:animate="initial"
+      >
+        {title}
+      </h1>
+      <p
+        class="mt-1 text-sub"
+        transition:name={description}
+        transition:animate="initial"
+      >
+        {description}
+      </p>
     </div>
     <Dots count={4} />
     <Sections contents={sections} links={links} />
