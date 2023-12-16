@@ -56,7 +56,8 @@ const { article } = Astro.props;
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={imageUrl} />
-    <ViewTransitions />
+
+    <ViewTransitions fallback="none" />
   </head>
 
   <body class="font-default font-normal text-main bg-background min-h-screen">
