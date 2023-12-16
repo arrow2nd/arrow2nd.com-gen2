@@ -5,6 +5,9 @@ import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), compress()]
+  integrations: [tailwind(), compress()],
+  image: {
+    remotePatterns: [{ protocol: "https" }]
+  }
 });
 
