@@ -19,6 +19,7 @@ const { contents } = Astro.props;
           <div
             class="aspect-video overflow-hidden rounded-xl border-2"
             transition:name={thumbnail.src}
+            transition:animate="initial"
           >
             <Image
               src={thumbnail.src}
@@ -28,10 +29,18 @@ const { contents } = Astro.props;
               format={"webp"}
             />
           </div>
-          <p class="mt-2 font-bold" transition:name={title}>
+          <p
+            class="mt-2 font-bold"
+            transition:name={title}
+            transition:animate="initial"
+          >
             {title}
           </p>
-          <p class="text-sm text-sub" transition:name={description}>
+          <p
+            class="text-sm text-sub"
+            transition:name={description}
+            transition:animate="initial"
+          >
             {description}
           </p>
         </a>
