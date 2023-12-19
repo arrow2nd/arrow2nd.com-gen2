@@ -4,12 +4,6 @@ import type { Work } from "@/types/work";
 
 import { createClient } from "newt-client-js";
 
-type CommonAttributes = {
-  _sys: {
-    customOrder: number;
-  };
-};
-
 const appUid = "portfolio";
 
 const client = createClient({
@@ -23,13 +17,15 @@ const client = createClient({
  * @returns 一覧
  */
 export const getAboutSections = async () => {
-  const sections = await client.getContents<CommonAttributes & Section>({
+  const sections = await client.getContents<Section>({
     appUid,
-    modelUid: "about"
+    modelUid: "about",
+    query: {
+      order: ["-_sys.customOrder"]
+    }
   });
 
-  // カスタムオーダーに沿ってソート
-  return sections.items.sort((a, b) => b._sys.customOrder - a._sys.customOrder);
+  return sections.items;
 };
 
 /**
@@ -37,15 +33,15 @@ export const getAboutSections = async () => {
  * @returns 一覧
  */
 export const getCategories = async () => {
-  const categories = await client.getContents<CommonAttributes & Category>({
+  const categories = await client.getContents<Category>({
     appUid,
-    modelUid: "category"
+    modelUid: "category",
+    query: {
+      order: ["-_sys.customOrder"]
+    }
   });
 
-  // カスタムオーダーに沿ってソート
-  return categories.items.sort(
-    (a, b) => b._sys.customOrder - a._sys.customOrder
-  );
+  return categories.items;
 };
 
 /**
@@ -59,8 +55,8 @@ export const getAllWorks = async (select?: string[]) => {
     modelUid: "work",
     query: {
       select,
-      order: ["createdAt"],
-      limit: 500
+      order: ["-_sys.createdAt"],
+      limit: 1000
     }
   });
 
