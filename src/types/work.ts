@@ -1,3 +1,4 @@
+import type { Content, Image } from "newt-client-js";
 import type { Category } from "./category";
 import type { Section } from "./section";
 
@@ -5,13 +6,6 @@ export type Link = {
   icon: string;
   href: string;
   text: string;
-};
-
-export type Image = {
-  altText: string;
-  src: string;
-  width: number;
-  height: number;
 };
 
 export type Work = {
@@ -22,4 +16,4 @@ export type Work = {
   description: string;
   sections: Section[];
   links: Link[];
-};
+} & Content;
