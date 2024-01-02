@@ -1,5 +1,5 @@
 ---
-import Icon from "astro-icon";
+import { Icon } from "astro-icon/components";
 
 export interface Props {
   basePath: string;
@@ -16,7 +16,7 @@ const { basePath, currentPage, lastPage, previousPage, nextPage } = Astro.props;
   {
     previousPage && (
       <a class="text-background bg-sea rounded-full" href={previousPage}>
-        <Icon class="w-8" name="ri:arrow-drop-left-line" />
+        <Icon class="w-8 h-8" name="ri:arrow-drop-left-line" />
       </a>
     )
   }
@@ -37,7 +37,7 @@ const { basePath, currentPage, lastPage, previousPage, nextPage } = Astro.props;
   {
     nextPage && (
       <a class="text-background bg-sea rounded-full" href={nextPage}>
-        <Icon class="w-8" name="ri:arrow-drop-right-line" />
+        <Icon class="w-8 h-8" name="ri:arrow-drop-right-line" />
       </a>
     )
   }
