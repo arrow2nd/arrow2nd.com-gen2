@@ -1,7 +1,7 @@
 ---
 import Cards from "@/components/Cards.astro";
 import CategoryTab from "@/components/CategoryTab.astro";
-import Pagination from "@/components/Pagination.astro";
+import Pager from "@/components/Pager.astro";
 import Title from "@/components/Title.astro";
 import Layout from "@/layouts/Layout.astro";
 import { getCategories, getAllWorks } from "@/libs/newt";
@@ -24,7 +24,7 @@ const { page } = Astro.props;
   <Cards contents={page.data} />
   {
     page.lastPage > 1 && (
-      <Pagination
+      <Pager
         basePath="/category/all"
         currentPage={page.currentPage}
         lastPage={page.lastPage}

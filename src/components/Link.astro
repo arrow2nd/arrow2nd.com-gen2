@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 
 export interface Props {
   href: string;
@@ -17,6 +17,6 @@ const { href, icon, text, targetBlank } = Astro.props;
   target={targetBlank ? "_blank" : undefined}
   rel={targetBlank ? "noopener noreferrer" : undefined}
 >
-  <Icon class="w-5" name={icon} />
+  <Icon class="w-5 h-5" name={icon} />
   <span class="ml-2 text-base tracking-widest">{text}</span>
 </a>
