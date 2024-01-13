@@ -18,7 +18,7 @@ const categories = await getCategories();
 const { page } = Astro.props;
 ---
 
-<Layout title="all">
+<Layout title="all" pagefindIgnore>
   <Title title="works" />
   <CategoryTab current="all" contents={categories} />
   <Cards contents={page.data} />
