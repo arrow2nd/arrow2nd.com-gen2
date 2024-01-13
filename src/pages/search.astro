@@ -12,26 +12,29 @@ import Layout from "@/layouts/Layout.astro";
 <script is:inline src="/pagefind/pagefind-ui.js"></script>
 
 <script is:inline>
-  const initPagefindUI = () => {
-    if (document.querySelector(".pagefind-ui")) {
-      return;
-    }
-
-    new PagefindUI({
-      element: "#search",
-      showImages: true,
-      showSubResults: true,
-      translations: {
-        placeholder: "キーワードから検索",
-        clear_search: "クリア",
-        zero_results: '"[SEARCH_TERM]" に一致するものは見つかりません 😿',
-        many_results: '"[SEARCH_TERM]" の検索結果（[COUNT] 件）',
-        one_result: '"[SEARCH_TERM]" の検索結果（[COUNT] 件）',
-        searching: '"[SEARCH_TERM]" を検索しています 🐾'
-      }
-    });
-  };
-
-  document.addEventListener("DOMContentLoaded", initPagefindUI);
-  document.addEventListener("astro:page-load", initPagefindUI);
+  if (
+    window.location.pathname === "/search" &&
+    !document.querySelector(".pagefind-ui")
+  ) {
+    document.addEventListener(
+      "astro:page-load",
+      () => {
+        console.log("page-load");
+        new PagefindUI({
+          element: "#search",
+          showImages: true,
+          showSubResults: true,
+          translations: {
+            placeholder: "キーワードから検索",
+            clear_search: "クリア",
+            zero_results: '"[SEARCH_TERM]" に一致するものは見つかりません 😿',
+            many_results: '"[SEARCH_TERM]" の検索結果（[COUNT] 件）',
+            one_result: '"[SEARCH_TERM]" の検索結果（[COUNT] 件）',
+            searching: '"[SEARCH_TERM]" を検索しています 🐾'
+          }
+        });
+      },
+      { once: true }
+    );
+  }
 </script>
