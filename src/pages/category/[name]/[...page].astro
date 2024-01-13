@@ -39,7 +39,7 @@ if (!name) {
 }
 ---
 
-<Layout title={name}>
+<Layout title={name} pagefindIgnore>
   <Title title="works" />
   <CategoryTab current={name} contents={categories} />
   <Cards contents={page.data} />

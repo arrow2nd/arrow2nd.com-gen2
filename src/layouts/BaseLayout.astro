@@ -9,6 +9,7 @@ export interface Props {
   imageUrl?: string;
   url?: string;
   article?: boolean;
+  pagefindIgnore?: boolean;
 }
 
 const title = Astro.props.title
@@ -26,6 +27,8 @@ const url = new URL(
 const imageUrl =
   Astro.props.imageUrl ||
   "https://avatars.githubusercontent.com/u/44780846?v=4";
+
+const pagefindIgnoreValue = Astro.props.pagefindIgnore ? "index" : undefined;
 
 const { article } = Astro.props;
 ---
@@ -46,7 +49,11 @@ const { article } = Astro.props;
     {article && <meta property="og:type" content="article" />}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={imageUrl} />
+    <meta
+      data-pagefind-default-meta="image[content]"
+      property="og:image"
+      content={imageUrl}
+    />
 
     <!-- Twitter OGP -->
     <meta
@@ -60,7 +67,10 @@ const { article } = Astro.props;
     <ViewTransitions fallback="swap" />
   </head>
 
-  <body class="font-default font-normal text-main bg-background min-h-screen">
+  <body
+    class="font-default font-normal text-main bg-background min-h-screen"
+    data-pagefind-ignore={pagefindIgnoreValue}
+  >
     <slot />
   </body>
 </html>

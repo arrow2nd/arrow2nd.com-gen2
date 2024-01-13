@@ -1,6 +1,27 @@
 ---
+import { Icon } from "astro-icon/components";
 import Link from "./Link.astro";
+
+export interface Props {
+  hiddenSearch?: boolean;
+}
 ---
 
+{
+  !Astro.props.hiddenSearch && (
+    <div class="px-4 border border-transparent border-r-main">
+      <a class="hover:text-sea transition-colors" href="/search">
+        <Icon class="w-5 h-5" name="ri:search-line" />
+      </a>
+    </div>
+  )
+}
 <Link href="/about" icon="ri:quill-pen-line" text="about" />
 <Link href="/category/all" icon="ri:code-s-slash-line" text="works" />
+
+<style is:global>
+  :root {
+    --pagefind-ui-text: #434343;
+    --pagefind-ui-tag: #45a3cc;
+  }
+</style>

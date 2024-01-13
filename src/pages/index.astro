@@ -6,7 +6,7 @@ import NaviLinks from "@/components/NaviLinks.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 ---
 
-<BaseLayout>
+<BaseLayout pagefindIgnore>
   <main>
     <div
       class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 space-y-3"
@@ -14,7 +14,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
       <h1 class="font-bold text-3xl tracking-widest">arrow2nd</h1>
       <Dots count={4} dashed />
       <div class="space-y-2">
-        <NaviLinks />
+        <NaviLinks hiddenSearch />
       </div>
     </div>
     <Image class="fixed right-0 bottom-0 w-48 md:w-64" src={neko} alt="ねこ" />

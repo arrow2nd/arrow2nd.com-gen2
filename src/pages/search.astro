@@ -1,0 +1,39 @@
+---
+import Title from "@/components/Title.astro";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="search" pagefindIgnore>
+  <Title title="search" />
+  <div id="search"></div>
+</Layout>
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+<script is:inline src="/pagefind/pagefind-ui.js"></script>
+
+<script is:inline>
+  if (
+    window.location.pathname === "/search" &&
+    !document.querySelector(".pagefind-ui")
+  ) {
+    document.addEventListener(
+      "astro:page-load",
+      () => {
+        new PagefindUI({
+          element: "#search",
+          showImages: true,
+          showSubResults: true,
+          translations: {
+            placeholder: "キーワードから検索",
+            clear_search: "クリア",
+            zero_results: '"[SEARCH_TERM]" に一致するものは見つかりません 😿',
+            many_results: '"[SEARCH_TERM]" の検索結果（[COUNT] 件）',
+            one_result: '"[SEARCH_TERM]" の検索結果（[COUNT] 件）',
+            searching: '"[SEARCH_TERM]" を検索しています 🐾'
+          }
+        });
+      },
+      { once: true }
+    );
+  }
+</script>
