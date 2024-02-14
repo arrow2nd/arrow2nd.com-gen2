@@ -30,6 +30,6 @@
     "prettier-plugin-tailwindcss": "^0.5.11"
   },
   "volta": {
-    "node": "20.11.0"
+    "node": "20.11.1"
   }
 }
