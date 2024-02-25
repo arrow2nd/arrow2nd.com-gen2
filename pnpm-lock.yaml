@@ -7,7 +7,7 @@ settings:
 dependencies:
   '@astrojs/sitemap':
     specifier: ^3.0.4
-    version: 3.0.4
+    version: 3.1.1
   '@astrojs/tailwind':
     specifier: ^5.1.0
     version: 5.1.0(astro@4.1.2)(tailwindcss@3.4.1)
@@ -125,8 +125,8 @@ packages:
       prismjs: 1.29.0
     dev: false
 
-  /@astrojs/sitemap@3.0.4:
-    resolution: {integrity: sha512-RSqiqs0oD8zTGaClHM0YB8n7e5En+Ihi+6qKthWf47pRkzHpENwlPGvKuEL0kUFXq+GzYot9e2JYH58gtr2q0w==}
+  /@astrojs/sitemap@3.1.1:
+    resolution: {integrity: sha512-qPgdBIcDUaea98mTtLfi5z9oXZpzSjEn/kes70/Ex8FOZZ+DIHVKRYOLOtvy8p+FTXr/9oc7BjmIbTYmYLLJVg==}
     dependencies:
       sitemap: 7.1.1
       zod: 3.22.4
@@ -1126,7 +1126,7 @@ packages:
   /@types/cheerio@0.22.35:
     resolution: {integrity: sha512-yD57BchKRvTV+JD53UZ6PD8KWY5g5rvvMLRnZR3EQBCZXiDT/HR+pKpMzFGlWNhFrXlo7VPZXtKvIEwZkAWOIA==}
     dependencies:
-      '@types/node': 20.11.0
+      '@types/node': 20.11.20
     dev: false
 
   /@types/css-tree@2.3.6:
@@ -1179,14 +1179,14 @@ packages:
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
     dev: false
 
-  /@types/node@20.11.0:
-    resolution: {integrity: sha512-o9bjXmDNcF7GbM4CNQpmi+TutCgap/K3w1JyKgxAjqx41zp9qlIAVFi0IhCNsJcXolEqLWhbFbEeL0PvYm4pcQ==}
+  /@types/node@20.11.17:
+    resolution: {integrity: sha512-QmgQZGWu1Yw9TDyAP9ZzpFJKynYNeOvwMJmaxABfieQoVoiVOS6MN1WSpqpRcbeA5+RW82kraAVxCCJg+780Qw==}
     dependencies:
       undici-types: 5.26.5
     dev: false
 
-  /@types/node@20.11.17:
-    resolution: {integrity: sha512-QmgQZGWu1Yw9TDyAP9ZzpFJKynYNeOvwMJmaxABfieQoVoiVOS6MN1WSpqpRcbeA5+RW82kraAVxCCJg+780Qw==}
+  /@types/node@20.11.20:
+    resolution: {integrity: sha512-7/rR21OS+fq8IyHTgtLkDK949uzsa6n8BkziAKtPVpugIkO6D+/ooXMvzXxDnZrmtXVfjb1bKQafYpb8s89LOg==}
     dependencies:
       undici-types: 5.26.5
     dev: false
@@ -1200,7 +1200,7 @@ packages:
   /@types/tar@6.1.10:
     resolution: {integrity: sha512-60ZO+W0tRKJ3ggdzJKp75xKVlNogKYMqGvr2bMH/+k3T0BagfYTnbmVDFMJB1BFttz6yRgP5MDGP27eh7brrqw==}
     dependencies:
-      '@types/node': 20.11.0
+      '@types/node': 20.11.20
       minipass: 4.2.8
     dev: false
 
@@ -1216,7 +1216,7 @@ packages:
     resolution: {integrity: sha512-oJoftv0LSuaDZE3Le4DbKX+KS9G36NzOeSap90UIK0yMA/NhKJhqlSGtNDORNRaIbQfzjXDrQa0ytJ6mNRGz/Q==}
     requiresBuild: true
     dependencies:
-      '@types/node': 20.11.0
+      '@types/node': 20.11.20
     dev: false
     optional: true
 
