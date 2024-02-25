@@ -37,7 +37,7 @@ dependencies:
     version: 2.8.0
   swiper:
     specifier: ^11.0.5
-    version: 11.0.5
+    version: 11.0.6
   tailwindcss:
     specifier: ^3.4.1
     version: 3.4.1
@@ -4681,8 +4681,8 @@ packages:
       picocolors: 1.0.0
     dev: false
 
-  /swiper@11.0.5:
-    resolution: {integrity: sha512-rhCwupqSyRnWrtNzWzemnBLMoyYuoDgGgspAm/8iBD3jCvAWycPLH4Z3TB0O5520DHLzMx94yUMH/B9Efpa48w==}
+  /swiper@11.0.6:
+    resolution: {integrity: sha512-W/Me7MQl5rNgdM5x9i3Gll76WsyVpnHn91GhBOyL7RCFUeg62aVnflzlVfIpXzZ/87FtJOfAoDH79ZH2Yq76zA==}
     engines: {node: '>= 4.7.0'}
     dev: false
 
