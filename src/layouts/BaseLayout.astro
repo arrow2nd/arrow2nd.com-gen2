@@ -65,6 +65,13 @@ const { article } = Astro.props;
     <meta name="twitter:image" content={imageUrl} />
 
     <ViewTransitions fallback="swap" />
+
+    <!-- Cloudflare Web Analytics -->
+    <script
+      is:inline
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "4a80b7c6804e4b62a426019d85db6e12"}'></script>
   </head>
 
   <body
