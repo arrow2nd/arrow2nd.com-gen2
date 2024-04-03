@@ -19,7 +19,7 @@ dependencies:
     version: 1.1.20
   '@pagefind/default-ui':
     specifier: ^1.0.4
-    version: 1.0.4
+    version: 1.1.0
   astro:
     specifier: ^4.5.9
     version: 4.5.13(typescript@5.4.3)
@@ -1141,8 +1141,8 @@ packages:
     dev: true
     optional: true
 
-  /@pagefind/default-ui@1.0.4:
-    resolution: {integrity: sha512-edkcaPSKq67C49Vehjo+LQCpT615v4d7JRhfGzFPccePvdklaL+VXrfghN/uIfsdoG+HoLI1PcYy2iFcB9CTkw==}
+  /@pagefind/default-ui@1.1.0:
+    resolution: {integrity: sha512-+XiAJAK++C64nQcD7s3Prdmd5S92lT05fwjOxm0L1jj80jbL+tmvcqkkFnPpoqhnicIPgcAX/Y5W0HRZnBt35w==}
     dev: false
 
   /@pagefind/linux-arm64@1.0.4:
