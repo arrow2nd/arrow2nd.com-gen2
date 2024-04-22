@@ -9,11 +9,11 @@
 `.env` を作成する
 
 ```
-MICROCMS_SERVICE_DOMAIN=<Service Domain>
-MICROCMS_API_KEY=<API Key>
-
 NEWT_SPACE_UID=<Space UID>
 NEWT_CDN_API_TOKEN=<CDN API Token>
+NEWT_API_TOKEN=<API Token>
+
+PREVIEW_SECRET=<任意の文字列>
 ```
 
 実行！
