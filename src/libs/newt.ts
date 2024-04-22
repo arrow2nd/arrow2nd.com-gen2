@@ -71,7 +71,7 @@ export const getAllWorks = async (select?: string[]) => {
 
 /**
  * IDから作品を取得 (プレビュー用)
- * @param id 記事ID
+ * @param id 作品ID
  * @returns 作品情報
  */
 export const getWorkPreview = async (id: string) => {
