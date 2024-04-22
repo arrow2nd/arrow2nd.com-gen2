@@ -5,6 +5,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build && pagefind --site dist",
+    "build:vercel": "astro build && pagefind --site .vercel/output/static",
     "preview": "astro preview",
     "astro": "astro"
   },
