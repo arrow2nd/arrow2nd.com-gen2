@@ -1,20 +1,20 @@
 import tailwind from "@astrojs/tailwind";
 import icon from "astro-icon";
 import { defineConfig } from "astro/config";
-import compress from "astro-compress";
-
 import sitemap from "@astrojs/sitemap";
+import playformCompress from "@playform/compress";
+
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), compress(), icon(), sitemap()],
+  output: "hybrid",
+  integrations: [tailwind(), icon(), sitemap(), playformCompress()],
   site: "https://www.arrow2nd.com",
   image: {
-    remotePatterns: [
-      {
-        protocol: "https"
-      }
-    ]
-  }
+    remotePatterns: [{
+      protocol: "https"
+    }]
+  },
+  adapter: vercel()
 });
-

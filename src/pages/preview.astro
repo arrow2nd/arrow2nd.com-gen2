@@ -1,0 +1,79 @@
+---
+import type { Work } from "@/types/work";
+
+import Carousel from "@/components/Carousel.astro";
+import Dots from "@/components/Dots.astro";
+import Sections from "@/components/Sections.astro";
+import Layout from "@/layouts/Layout.astro";
+import { getWorkPreview } from "@/libs/newt";
+
+// SSRを有効に
+export const prerender = false;
+
+let id = "";
+let secret = "";
+
+// クエリパラメータを取得
+if (Astro.request.method === "GET") {
+  try {
+    const searchParams = new URL(Astro.request.url).searchParams;
+    id = searchParams.get("id");
+    secret = searchParams.get("secret");
+  } catch (err) {
+    console.error("[Failed get searchParams]", err);
+  }
+}
+
+// シークレットが不正
+if (secret !== import.meta.env.PREVIEW_SECRET) {
+  return new Response(null, {
+    status: 401,
+    statusText: "Invalid secret"
+  });
+}
+
+// 作品IDが無い
+if (!id) {
+  return new Response(null, {
+    status: 404
+  });
+}
+
+let preview: Work;
+
+try {
+  preview = await getWorkPreview(id);
+
+  // 存在しない場合
+  if (!preview) {
+    throw new Error(`ID:${id} is notfound`)
+  }
+} catch (err) {
+  console.log("[Failed fetch]", err);
+  return new Response(null, {
+    status: 404
+  });
+}
+
+const { title, description, images, sections, links } = preview;
+const ogpImageUrl = images[0].src;
+---
+
+<Layout title={title} description={description} imageUrl={ogpImageUrl} article>
+  <div class="font-bold text-red-600 text-center">
+    ⚠️ これはプレビューモードです
+  </div>
+  <div class="space-y-6">
+    <div>
+      <Carousel images={images} />
+      <h1 class="mt-4 font-bold text-2xl">
+        {title}
+      </h1>
+      <p class="mt-1 text-sub">
+        {description}
+      </p>
+    </div>
+    <Dots count={4} />
+    <Sections contents={sections} links={links} />
+  </div>
+</Layout>
