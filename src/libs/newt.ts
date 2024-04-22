@@ -12,6 +12,12 @@ const client = createClient({
   apiType: "cdn"
 });
 
+const previewClient = createClient({
+  spaceUid: import.meta.env.NEWT_SPACE_UID,
+  token: import.meta.env.NEWT_API_TOKEN,
+  apiType: "api"
+});
+
 /**
  * Aboutセクションを取得
  * @returns 一覧
@@ -61,4 +67,19 @@ export const getAllWorks = async (select?: string[]) => {
   });
 
   return works.items;
+};
+
+/**
+ * IDから作品を取得 (プレビュー用)
+ * @param id 記事ID
+ * @returns 作品情報
+ */
+export const getWorkPreview = async (id: string) => {
+  return await previewClient.getFirstContent<Work>({
+    appUid,
+    modelUid: "work",
+    query: {
+      id
+    }
+  });
 };
