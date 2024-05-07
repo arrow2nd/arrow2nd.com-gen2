@@ -1,3 +1,4 @@
+import type { Career } from "@/types/career";
 import type { Category } from "@/types/category";
 import type { Section } from "@/types/section";
 import type { Work } from "@/types/work";
@@ -6,7 +7,7 @@ import { createClient } from "newt-client-js";
 
 const appUid = "portfolio";
 
-const client = createClient({
+const prodClient = createClient({
   spaceUid: import.meta.env.NEWT_SPACE_UID,
   token: import.meta.env.NEWT_CDN_API_TOKEN,
   apiType: "cdn"
@@ -17,6 +18,8 @@ const previewClient = createClient({
   token: import.meta.env.NEWT_API_TOKEN,
   apiType: "api"
 });
+
+const client = import.meta.env.DEV ? previewClient : prodClient;
 
 /**
  * Aboutセクションを取得
@@ -82,4 +85,20 @@ export const getWorkPreview = async (id: string) => {
       id
     }
   });
+};
+
+/**
+ * 経歴を取得
+ * @returns 一覧
+ */
+export const getCareer = async () => {
+  const career = await client.getContents<Career>({
+    appUid,
+    modelUid: "career",
+    query: {
+      order: ["-_sys.customOrder"]
+    }
+  });
+
+  return career.items;
 };

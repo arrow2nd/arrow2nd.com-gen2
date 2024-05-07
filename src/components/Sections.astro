@@ -17,9 +17,7 @@ const existLinks = links && links.length > 0;
     contents.map(({ title, text }) => (
       <section>
         <h2 class="mb-2 font-bold text-xl">{title}</h2>
-        {text.split("\n").map((line) => (
-          <p class="text-sub">{line}</p>
-        ))}
+        <p class="text-sub whitespace-pre-line">{text}</p>
       </section>
     ))
   }

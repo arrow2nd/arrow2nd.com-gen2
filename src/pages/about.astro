@@ -5,9 +5,11 @@ import iconImage from "@/assets/icon.png";
 import Sections from "@/components/Sections.astro";
 import Title from "@/components/Title.astro";
 import Layout from "@/layouts/Layout.astro";
-import { getAboutSections } from "@/libs/newt";
+import { getAboutSections, getCareer } from "@/libs/newt";
+import { Icon } from "astro-icon/components";
 
 const about = await getAboutSections();
+const carrer = await getCareer();
 ---
 
 <Layout title="about">
@@ -18,4 +20,29 @@ const about = await getAboutSections();
     <Image src={iconImage} alt="アイコン画像" width={256} height={177} />
   </div>
   <Sections contents={about} />
+
+  <section>
+    <h2 class="mb-2 font-bold text-xl">経歴</h2>
+    <div class="ml-2">
+      {
+        carrer.map(({ label, icon, title, body }, i) => (
+          <div class="flex space-x-4 text-main">
+            <div class="flex flex-col items-center">
+              <div
+                class={`border-l-2 h-full ${i === 0 ? "border-transparent" : "border-sub"}`}
+              />
+              <Icon class="flex-none w-5 h-5 my-1" name={`ri:${icon}`} />
+              <div class="border-l-2 border-sub h-full" />
+            </div>
+
+            <div class="my-2 text-sub text-sm">
+              <p>{label}</p>
+              <p class="text-main text-base tracking-wider">{title}</p>
+              <p>{body}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
 </Layout>
