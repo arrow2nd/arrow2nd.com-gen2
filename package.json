@@ -16,7 +16,7 @@
     "@fontsource/zen-maru-gothic": "^5.0.18",
     "@iconify-json/ri": "^1.1.20",
     "@pagefind/default-ui": "^1.0.4",
-    "@playform/compress": "^0.0.7",
+    "@playform/compress": "^0.0.10",
     "astro": "^4.5.9",
     "astro-icon": "^1.1.0",
     "newt-client-js": "^3.3.1",
