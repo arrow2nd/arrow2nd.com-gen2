@@ -14,9 +14,14 @@ export default defineConfig({
     icon(),
     sitemap(),
     playformCompress({
-      CSS: false
+      CSS: true
     })
   ],
+  vite: {
+    build: {
+      minify: false
+    }
+  },
   site: "https://www.arrow2nd.com",
   image: {
     remotePatterns: [
