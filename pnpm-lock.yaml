@@ -13,7 +13,7 @@ importers:
         version: 3.1.6
       '@astrojs/tailwind':
         specifier: ^5.1.0
-        version: 5.1.0(astro@4.11.5(@types/node@20.14.2)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.4.5))(tailwindcss@3.4.5)
+        version: 5.1.0(astro@4.11.5(@types/node@20.14.2)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.4.5))(tailwindcss@3.4.6)
       '@astrojs/vercel':
         specifier: ^7.5.3
         version: 7.7.2(astro@4.11.5(@types/node@20.14.2)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.4.5))
@@ -46,7 +46,7 @@ importers:
         version: 11.1.5
       tailwindcss:
         specifier: ^3.4.1
-        version: 3.4.5
+        version: 3.4.6
     devDependencies:
       default-ui:
         specifier: link:@types/@pagefind/default-ui
@@ -2527,8 +2527,8 @@ packages:
     resolution: {integrity: sha512-JJQWFXdxiMGC2j6ZGTYat5Z7NN9JORJBgHp0/joX9uPod+cRj0wr5H5VnWSNIz9JeAamQvYKaG7aFrGHIF9OEg==}
     engines: {node: '>= 4.7.0'}
 
-  tailwindcss@3.4.5:
-    resolution: {integrity: sha512-DlTxttYcogpDfx3tf/8jfnma1nfAYi2cBUYV2YNoPPecwmO3YGiFlOX9D8tGAu+EDF38ryBzvrDKU/BLMsUwbw==}
+  tailwindcss@3.4.6:
+    resolution: {integrity: sha512-1uRHzPB+Vzu57ocybfZ4jh5Q3SdlH7XW23J5sQoM9LhE9eIOlzxer/3XPSsycvih3rboRsvt0QCmzSrqyOYUIA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -2818,13 +2818,13 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.0(astro@4.11.5(@types/node@20.14.2)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.4.5))(tailwindcss@3.4.5)':
+  '@astrojs/tailwind@5.1.0(astro@4.11.5(@types/node@20.14.2)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.4.5))(tailwindcss@3.4.6)':
     dependencies:
       astro: 4.11.5(@types/node@20.14.2)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.4.5)
       autoprefixer: 10.4.16(postcss@8.4.33)
       postcss: 8.4.33
       postcss-load-config: 4.0.2(postcss@8.4.33)
-      tailwindcss: 3.4.5
+      tailwindcss: 3.4.6
     transitivePeerDependencies:
       - ts-node
 
@@ -5554,7 +5554,7 @@ snapshots:
 
   swiper@11.1.5: {}
 
-  tailwindcss@3.4.5:
+  tailwindcss@3.4.6:
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
