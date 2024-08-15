@@ -9,12 +9,26 @@ import vercel from "@astrojs/vercel/serverless";
 // https://astro.build/config
 export default defineConfig({
   output: "hybrid",
-  integrations: [tailwind(), icon(), sitemap(), playformCompress()],
+  integrations: [
+    tailwind(),
+    icon(),
+    sitemap(),
+    playformCompress({
+      HTML: {
+        "html-minifier-terser": {
+          collapseWhitespace: true,
+          preserveLineBreaks: true
+        }
+      }
+    })
+  ],
   site: "https://www.arrow2nd.com",
   image: {
-    remotePatterns: [{
-      protocol: "https"
-    }]
+    remotePatterns: [
+      {
+        protocol: "https"
+      }
+    ]
   },
   adapter: vercel()
 });
