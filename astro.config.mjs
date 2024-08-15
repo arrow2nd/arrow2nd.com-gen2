@@ -16,12 +16,18 @@ export default defineConfig({
     playformCompress({
       HTML: {
         "html-minifier-terser": {
+          removeAttributeQuotes: false,
           collapseWhitespace: true,
           preserveLineBreaks: true
         }
       }
     })
   ],
+  vite: {
+    build: {
+      minify: false
+    }
+  },
   site: "https://www.arrow2nd.com",
   image: {
     remotePatterns: [
