@@ -10,6 +10,8 @@ export interface Props {
 
 const { contents, links } = Astro.props;
 const existLinks = links && links.length > 0;
+
+console.log(contents);
 ---
 
 <div class="space-y-6">
