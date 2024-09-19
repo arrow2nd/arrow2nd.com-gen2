@@ -13,7 +13,7 @@ importers:
         version: 3.1.6
       '@astrojs/tailwind':
         specifier: ^5.1.0
-        version: 5.1.0(astro@4.15.6(@types/node@22.4.0)(lightningcss@1.25.1)(rollup@4.21.3)(terser@5.31.3)(typescript@5.4.5))(tailwindcss@3.4.11)
+        version: 5.1.0(astro@4.15.6(@types/node@22.4.0)(lightningcss@1.25.1)(rollup@4.21.3)(terser@5.31.3)(typescript@5.4.5))(tailwindcss@3.4.12)
       '@astrojs/vercel':
         specifier: ^7.7.2
         version: 7.8.1(astro@4.15.6(@types/node@22.4.0)(lightningcss@1.25.1)(rollup@4.21.3)(terser@5.31.3)(typescript@5.4.5))
@@ -46,7 +46,7 @@ importers:
         version: 11.1.14
       tailwindcss:
         specifier: ^3.4.10
-        version: 3.4.11
+        version: 3.4.12
     devDependencies:
       default-ui:
         specifier: link:@types/@pagefind/default-ui
@@ -2284,8 +2284,8 @@ packages:
     resolution: {integrity: sha512-Kkpbhhdjw2qQs2O2DGX+8m5OVqEcbB9HRBvuYM9pgrjEFUg30A9LmXNlTAUj4S9kgtGyrMbTzVjH7E+s5Re2yg==}
     engines: {node: ^10 || ^12 || >=14}
 
-  postcss@8.4.45:
-    resolution: {integrity: sha512-7KTLTdzdZZYscUc65XmjFiB73vBhBfbPztCYdUNvlaso9PrzjzcmjqBPR0lNGkcVlcO4BjiO5rK/qNz+XAen1Q==}
+  postcss@8.4.47:
+    resolution: {integrity: sha512-56rxCq7G/XfB4EkXq9Egn5GCqugWvDFjafDOThIdMBsI15iqPqR5r15TfSr1YPYeEI19YeaXMCbY6u88Y76GLQ==}
     engines: {node: ^10 || ^12 || >=14}
 
   preferred-pm@4.0.0:
@@ -2654,8 +2654,8 @@ packages:
     resolution: {integrity: sha512-VbQLQXC04io6AoAjIUWuZwW4MSYozkcP9KjLdrsG/00Q/yiwvhz9RQyt0nHXV10hi9NVnDNy1/wv7Dzq1lkOCQ==}
     engines: {node: '>= 4.7.0'}
 
-  tailwindcss@3.4.11:
-    resolution: {integrity: sha512-qhEuBcLemjSJk5ajccN9xJFtM/h0AVCPaA6C92jNP+M2J8kX+eMJHI7R2HFKUvvAsMpcfLILMCFYSeDwpMmlUg==}
+  tailwindcss@3.4.12:
+    resolution: {integrity: sha512-Htf/gHj2+soPb9UayUNci/Ja3d8pTmu9ONTfh4QY8r3MATTZOzmv6UYWF7ZwikEIC8okpfqmGqrmDehua8mF8w==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -2981,13 +2981,13 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.0(astro@4.15.6(@types/node@22.4.0)(lightningcss@1.25.1)(rollup@4.21.3)(terser@5.31.3)(typescript@5.4.5))(tailwindcss@3.4.11)':
+  '@astrojs/tailwind@5.1.0(astro@4.15.6(@types/node@22.4.0)(lightningcss@1.25.1)(rollup@4.21.3)(terser@5.31.3)(typescript@5.4.5))(tailwindcss@3.4.12)':
     dependencies:
       astro: 4.15.6(@types/node@22.4.0)(lightningcss@1.25.1)(rollup@4.21.3)(terser@5.31.3)(typescript@5.4.5)
       autoprefixer: 10.4.16(postcss@8.4.33)
       postcss: 8.4.33
       postcss-load-config: 4.0.2(postcss@8.4.33)
-      tailwindcss: 3.4.11
+      tailwindcss: 3.4.12
     transitivePeerDependencies:
       - ts-node
 
@@ -5377,17 +5377,17 @@ snapshots:
       mlly: 1.7.1
       pathe: 1.1.2
 
-  postcss-import@15.1.0(postcss@8.4.45):
+  postcss-import@15.1.0(postcss@8.4.47):
     dependencies:
-      postcss: 8.4.45
+      postcss: 8.4.47
       postcss-value-parser: 4.2.0
       read-cache: 1.0.0
       resolve: 1.22.8
 
-  postcss-js@4.0.1(postcss@8.4.45):
+  postcss-js@4.0.1(postcss@8.4.47):
     dependencies:
       camelcase-css: 2.0.1
-      postcss: 8.4.45
+      postcss: 8.4.47
 
   postcss-load-config@4.0.2(postcss@8.4.33):
     dependencies:
@@ -5396,16 +5396,16 @@ snapshots:
     optionalDependencies:
       postcss: 8.4.33
 
-  postcss-load-config@4.0.2(postcss@8.4.45):
+  postcss-load-config@4.0.2(postcss@8.4.47):
     dependencies:
       lilconfig: 3.1.2
       yaml: 2.5.1
     optionalDependencies:
-      postcss: 8.4.45
+      postcss: 8.4.47
 
-  postcss-nested@6.2.0(postcss@8.4.45):
+  postcss-nested@6.2.0(postcss@8.4.47):
     dependencies:
-      postcss: 8.4.45
+      postcss: 8.4.47
       postcss-selector-parser: 6.1.2
 
   postcss-selector-parser@6.1.2:
@@ -5421,7 +5421,7 @@ snapshots:
       picocolors: 1.1.0
       source-map-js: 1.0.2
 
-  postcss@8.4.45:
+  postcss@8.4.47:
     dependencies:
       nanoid: 3.3.7
       picocolors: 1.1.0
@@ -5865,7 +5865,7 @@ snapshots:
 
   swiper@11.1.14: {}
 
-  tailwindcss@3.4.11:
+  tailwindcss@3.4.12:
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
@@ -5881,11 +5881,11 @@ snapshots:
       normalize-path: 3.0.0
       object-hash: 3.0.0
       picocolors: 1.1.0
-      postcss: 8.4.45
-      postcss-import: 15.1.0(postcss@8.4.45)
-      postcss-js: 4.0.1(postcss@8.4.45)
-      postcss-load-config: 4.0.2(postcss@8.4.45)
-      postcss-nested: 6.2.0(postcss@8.4.45)
+      postcss: 8.4.47
+      postcss-import: 15.1.0(postcss@8.4.47)
+      postcss-js: 4.0.1(postcss@8.4.47)
+      postcss-load-config: 4.0.2(postcss@8.4.47)
+      postcss-nested: 6.2.0(postcss@8.4.47)
       postcss-selector-parser: 6.1.2
       resolve: 1.22.8
       sucrase: 3.35.0
@@ -6037,7 +6037,7 @@ snapshots:
   vite@5.4.5(@types/node@22.4.0)(lightningcss@1.25.1)(terser@5.31.3):
     dependencies:
       esbuild: 0.21.5
-      postcss: 8.4.45
+      postcss: 8.4.47
       rollup: 4.21.3
     optionalDependencies:
       '@types/node': 22.4.0
