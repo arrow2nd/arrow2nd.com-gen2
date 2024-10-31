@@ -22,7 +22,7 @@ importers:
         version: 5.1.0
       '@iconify-json/ri':
         specifier: ^1.2.2
-        version: 1.2.2
+        version: 1.2.3
       '@pagefind/default-ui':
         specifier: ^1.1.1
         version: 1.1.1
@@ -353,8 +353,8 @@ packages:
   '@fontsource/zen-maru-gothic@5.1.0':
     resolution: {integrity: sha512-LDWD7JrBOqglBA/6wvRiCs7SRQSbmO+wCFvlaVqbSD3U+Q0PG+ldj/81aszJYVEFsIWPwUcccn5Y8VT/4lrtcg==}
 
-  '@iconify-json/ri@1.2.2':
-    resolution: {integrity: sha512-7i6uxb8guYyyWtcf23QgKXlipvwaqBSnm3tGgo0eBlc1C8C1rHVEJXManwB7PrxWXLAecBL/Sb+0zaLfSYeQzg==}
+  '@iconify-json/ri@1.2.3':
+    resolution: {integrity: sha512-UVKofd5xkSevGd5K01pvO4NWsu+2C9spu+GxnMZUYymUiaWmpCAxtd22MFSpm6MGf0MP4GCwhDCo1Q8L8oZ9wg==}
 
   '@iconify/tools@4.0.5':
     resolution: {integrity: sha512-l8KoA1lxlN/FFjlMd3vjfD7BtcX/QnFWtlBapILMlJSBgM5zhDYak/ldw/LkKG3258q/0YmXa48sO/QpxX7ptg==}
@@ -3104,7 +3104,7 @@ snapshots:
 
   '@fontsource/zen-maru-gothic@5.1.0': {}
 
-  '@iconify-json/ri@1.2.2':
+  '@iconify-json/ri@1.2.3':
     dependencies:
       '@iconify/types': 2.0.0
 
