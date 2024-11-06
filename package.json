@@ -15,10 +15,10 @@
     "@astrojs/vercel": "^7.8.2",
     "@fontsource/zen-maru-gothic": "^5.1.0",
     "@iconify-json/ri": "^1.2.3",
-    "@pagefind/default-ui": "^1.1.1",
+    "@pagefind/default-ui": "^1.2.0",
     "@playform/compress": "^0.1.6",
-    "astro": "^4.16.8",
-    "astro-icon": "^1.1.1",
+    "astro": "^4.16.9",
+    "astro-icon": "^1.1.2",
     "newt-client-js": "^3.3.6",
     "svgo": "^2.8.0",
     "swiper": "^11.1.14",
@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "default-ui": "link:@types/@pagefind/default-ui",
-    "pagefind": "^1.1.1",
+    "pagefind": "^1.2.0",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.8"
