@@ -17,7 +17,7 @@
     "@iconify-json/ri": "^1.2.3",
     "@pagefind/default-ui": "^1.2.0",
     "@playform/compress": "^0.1.6",
-    "astro": "^4.16.9",
+    "astro": "^5.0.0",
     "astro-icon": "^1.1.2",
     "newt-client-js": "^3.3.6",
     "svgo": "^2.8.0",
