@@ -2,6 +2,7 @@ import icon from "astro-icon";
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import playformCompress from "@playform/compress";
+import tailwindcss from "@tailwindcss/vite";
 
 import vercel from "@astrojs/vercel";
 
@@ -16,6 +17,7 @@ export default defineConfig({
     })
   ],
   vite: {
+    plugins: [tailwindcss()],
     build: {
       minify: true
     }
