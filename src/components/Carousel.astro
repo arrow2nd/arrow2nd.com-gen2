@@ -11,7 +11,7 @@ const isMultiple = images.length > 1;
 ---
 
 <swiper-container
-  class="flex relative mx-[calc(50%_-_50vw)] aspect-video border-y-2 md:mx-0 md:border-2 overflow-hidden"
+  class="flex relative mx-[calc(50%_-_50vw)] aspect-video border-y-2 border-neutral-200 md:mx-0 md:border-2 overflow-hidden"
   loop={isMultiple}
   autoplay-delay={isMultiple && "8000"}
   thumbs-swiper={isMultiple && "#thumbs"}
@@ -45,7 +45,7 @@ const isMultiple = images.length > 1;
       watch-slides-progress="true"
     >
       {images.map(({ src, altText, width, height }) => (
-        <swiper-slide class="cursor-pointer border-2 transition-colors">
+        <swiper-slide class="cursor-pointer border-neutral-200 border-2 transition-colors">
           <Image
             src={src}
             alt={altText}

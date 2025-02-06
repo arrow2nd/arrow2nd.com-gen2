@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --font-default: "Zen Maru Gothic", "sans-serif";
+
+  --color-main: #434343;
+  --color-sub: #595959;
+  --color-background: #fbfbfb;
+  --color-sea: #45a3cc;
+}

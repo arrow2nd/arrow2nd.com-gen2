@@ -1,16 +1,15 @@
-import tailwind from "@astrojs/tailwind";
 import icon from "astro-icon";
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import playformCompress from "@playform/compress";
+import tailwindcss from "@tailwindcss/vite";
 
-import vercel from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
   output: "static",
   integrations: [
-    tailwind(),
     icon(),
     sitemap(),
     playformCompress({
@@ -18,6 +17,7 @@ export default defineConfig({
     })
   ],
   vite: {
+    plugins: [tailwindcss()],
     build: {
       minify: true
     }
