@@ -48,9 +48,8 @@ if (!name) {
       <Pager
         basePath={`/category/${name}`}
         currentPage={page.currentPage}
-        lastPage={page.lastPage}
-        previousPage={page.url.prev}
-        nextPage={page.url.next}
+        totalPage={page.lastPage}
+        url={page.url}
       />
     )
   }

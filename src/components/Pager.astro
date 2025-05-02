@@ -1,42 +1,68 @@
 ---
+import type { Work } from "@/types/work";
+import type { Page } from "astro";
 import { Icon } from "astro-icon/components";
 
 export interface Props {
   basePath: string;
   currentPage: number;
-  lastPage: number;
-  previousPage?: string;
-  nextPage?: string;
+  totalPage: number;
+  url: Page<Work>["url"];
 }
 
-const { basePath, currentPage, lastPage, previousPage, nextPage } = Astro.props;
+const { basePath, currentPage, totalPage, url } = Astro.props;
 ---
 
 <div class="flex justify-center items-center pt-12 text-base space-x-4">
   {
-    previousPage && (
-      <a class="text-background bg-sea rounded-full" href={previousPage}>
+    url.prev && (
+      <a class="text-background bg-sea rounded-full" href={url.prev}>
         <Icon class="w-8 h-8" name="ri:arrow-drop-left-line" />
       </a>
     )
   }
   {
-    [...Array(lastPage)].map((_, i) => {
+    currentPage > 2 && (
+      <>
+        <a class="hover:underline" href={basePath}>
+          1
+        </a>
+        <span>…</span>
+      </>
+    )
+  }
+  {
+    [...Array(totalPage)].map((_, i) => {
       const pageNum = i + 1;
       const className =
         pageNum === currentPage ? "font-bold text-sea" : "hover:underline";
       const path = i === 0 ? "" : pageNum;
 
-      return (
+      const showPageNum =
+        (currentPage === 1 && pageNum < 4) || // 1 2 3
+        (currentPage === totalPage && pageNum > totalPage - 3) || // 8 9 10
+        Math.abs(pageNum - currentPage) < 2; // 周辺3ページ
+
+      return showPageNum ? (
         <a class={className} href={`${basePath}/${path}`}>
           {pageNum}
         </a>
-      );
+      ) : undefined;
     })
   }
   {
-    nextPage && (
-      <a class="text-background bg-sea rounded-full" href={nextPage}>
+    currentPage < totalPage - 1 && (
+      <>
+        <span>…</span>
+        <a class="hover:underline" href={`${basePath}/${totalPage}`}>
+          {totalPage}
+        </a>
+      </>
+    )
+  }
+  {
+    url.next && (
+      <a class="text-background bg-sea rounded-full" href={url.next}>
         <Icon class="w-8 h-8" name="ri:arrow-drop-right-line" />
       </a>
     )
