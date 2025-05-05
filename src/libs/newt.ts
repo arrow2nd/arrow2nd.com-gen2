@@ -10,13 +10,13 @@ const appUid = "portfolio";
 const prodClient = createClient({
   spaceUid: import.meta.env.NEWT_SPACE_UID,
   token: import.meta.env.NEWT_CDN_API_TOKEN,
-  apiType: "cdn"
+  apiType: "cdn",
 });
 
 const previewClient = createClient({
   spaceUid: import.meta.env.NEWT_SPACE_UID,
   token: import.meta.env.NEWT_API_TOKEN,
-  apiType: "api"
+  apiType: "api",
 });
 
 const client = import.meta.env.DEV ? previewClient : prodClient;
@@ -30,8 +30,8 @@ export const getAboutSections = async () => {
     appUid,
     modelUid: "about",
     query: {
-      order: ["-_sys.customOrder"]
-    }
+      order: ["-_sys.customOrder"],
+    },
   });
 
   return sections.items;
@@ -46,8 +46,8 @@ export const getCategories = async () => {
     appUid,
     modelUid: "category",
     query: {
-      order: ["-_sys.customOrder"]
-    }
+      order: ["-_sys.customOrder"],
+    },
   });
 
   return categories.items;
@@ -65,8 +65,8 @@ export const getAllWorks = async (select?: string[]) => {
     query: {
       select,
       order: ["-_sys.createdAt"],
-      limit: 1000
-    }
+      limit: 1000,
+    },
   });
 
   return works.items;
@@ -82,8 +82,8 @@ export const getWorkPreview = async (id: string) => {
     appUid,
     modelUid: "work",
     query: {
-      id
-    }
+      id,
+    },
   });
 };
 
@@ -96,8 +96,8 @@ export const getCareer = async () => {
     appUid,
     modelUid: "career",
     query: {
-      order: ["-_sys.customOrder"]
-    }
+      order: ["-_sys.customOrder"],
+    },
   });
 
   return career.items;

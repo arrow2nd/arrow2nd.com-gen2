@@ -7,7 +7,7 @@ interface Props {
 const { count, dashed } = Astro.props;
 ---
 
-<div class="space-x-2">
+<div class="flex items-center gap-2">
   {
     [...Array(count)].map((_, i) => (
       <span

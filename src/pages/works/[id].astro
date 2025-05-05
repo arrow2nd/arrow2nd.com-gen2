@@ -1,6 +1,4 @@
 ---
-import type { Work } from "@/types/work";
-
 import Carousel from "@/components/Carousel.astro";
 import Dots from "@/components/Dots.astro";
 import Sections from "@/components/Sections.astro";
@@ -16,7 +14,8 @@ export async function getStaticPaths() {
   }));
 }
 
-const { title, description, images, sections, links } = Astro.props as Work;
+const { title, description, tags, images, sections, links } = Astro.props;
+
 const ogpImageUrl = images[0].src;
 ---
 
@@ -27,9 +26,15 @@ const ogpImageUrl = images[0].src;
       <h1 class="mt-4 font-bold text-2xl">
         {title}
       </h1>
-      <p class="mt-1 text-sub">
-        {description}
-      </p>
+      <div class="mt-1 space-x-1">
+        {
+          tags.map(({ name }) => (
+            <a class="text-base text-sea hover:underline" href={`/tag/${name}`}>
+              #{name}
+            </a>
+          ))
+        }
+      </div>
     </div>
     <Dots count={4} />
     <Sections contents={sections} links={links} />

@@ -1,0 +1,52 @@
+---
+import type { GetStaticPathsOptions } from "astro";
+
+import Layout from "@/layouts/Layout.astro";
+import { getAllWorks } from "@/libs/newt";
+import Title from "@/components/Title.astro";
+import Cards from "@/components/Cards.astro";
+import Pager from "@/components/Pager.astro";
+
+export const getStaticPaths = async ({ paginate }: GetStaticPathsOptions) => {
+  const allWorks = await getAllWorks();
+  const allTags = [
+    ...new Set(allWorks.flatMap(({ tags }) => tags.map(({ name }) => name)))
+  ];
+
+  return allTags.flatMap((name) => {
+    const works = allWorks.filter((work) =>
+      work.tags.some((tag) => tag.name === name)
+    );
+
+    return paginate(works, {
+      params: {
+        name
+      },
+      pageSize: 12
+    });
+  });
+};
+
+const rawTagName = Astro.params.name;
+const tagName = `#${decodeURIComponent(rawTagName)}`;
+const { page } = Astro.props;
+---
+
+<Layout
+  title={tagName}
+  description={`${tagName}がつけられた作品の一覧です。`}
+  pagefindIgnore
+>
+  <Title title="works" suffix={tagName} />
+  <Cards contents={page.data} />
+  {
+    page.lastPage > 1 && (
+      <Pager
+        basePath={`/tag/${rawTagName}`}
+        currentPage={page.currentPage}
+        totalPage={page.lastPage}
+        url={page.url}
+      />
+    )
+  }
+</Layout>
