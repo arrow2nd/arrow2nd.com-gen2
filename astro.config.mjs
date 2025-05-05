@@ -30,5 +30,8 @@ export default defineConfig({
       }
     ]
   },
-  adapter: vercel()
+  adapter: vercel(),
+  redirects: {
+    "/category/imas": "/category/web"
+  }
 });
