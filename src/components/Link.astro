@@ -6,9 +6,10 @@ export interface Props {
   icon: string;
   text: string;
   targetBlank?: boolean;
+  paddingBottom?: boolean;
 }
 
-const { href, icon, text, targetBlank } = Astro.props;
+const { href, icon, text, targetBlank, paddingBottom } = Astro.props;
 ---
 
 <a
@@ -18,5 +19,10 @@ const { href, icon, text, targetBlank } = Astro.props;
   rel={targetBlank ? "noopener noreferrer" : undefined}
 >
   <Icon class="w-5 h-5" name={icon} />
-  <span class="ml-2 text-base tracking-widest">{text}</span>
+  <span
+    class:list={[
+      "ml-1.5 tracking-widest",
+      paddingBottom ? "text-base/5 pb-1" : "text-base"
+    ]}>{text}</span
+  >
 </a>

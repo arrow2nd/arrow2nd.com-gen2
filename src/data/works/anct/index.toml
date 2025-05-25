@@ -1,0 +1,31 @@
+id = "anct"
+title = "anct"
+shortDescription = "ターミナルからアニメを探す・記録する"
+category = "tool"
+tags = ["CLI", "便利ツール", "Go"]
+createdAt = "2023/02/01"
+
+[[images]]
+src = "./0_demo.png"
+alt = "動作デモ"
+
+[[images]]
+src = "./1_search.png"
+alt = "検索しているところ"
+
+[[sections]]
+title = "概要"
+body = "視聴記録に特化した、アニメ視聴記録サイト「Annict」の非公式CLIクライアント。"
+
+[[sections]]
+title = "特徴"
+body = "作品情報の検索、視聴ステータスの更新、レビューの作成、エピソードの視聴記録ができます。"
+
+[[sections]]
+title = "使用技術"
+body = "Go / Annict Web API (GraphQL) / GoReleaser / GitHub Actions"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/anct"
+label = "GitHub"

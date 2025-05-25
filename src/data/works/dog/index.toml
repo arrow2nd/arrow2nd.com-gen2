@@ -1,0 +1,27 @@
+id = "dog"
+title = "いぬだと思います。"
+shortDescription = "たぶん、いぬのスタンプ"
+category = "sticker"
+tags = ["いぬのようなもの"]
+createdAt = "2019/08/01"
+
+[[images]]
+src = "./0.png"
+alt = "いぬだと思います。のスタンプ"
+
+[[images]]
+src = "./1.png"
+alt = "いぬだと思います。のスタンプ"
+
+[[sections]]
+title = "概要"
+body = "いぬのような……なにかのスタンプです。"
+
+[[sections]]
+title = "ひとこと"
+body = "🐶"
+
+[[links]]
+icon = "line-line"
+href = "https://store.line.me/stickershop/product/8527524"
+label = "LINE STORE"

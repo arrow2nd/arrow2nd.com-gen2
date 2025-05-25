@@ -23,13 +23,6 @@ export default defineConfig({
     }
   },
   site: "https://www.arrow2nd.com",
-  image: {
-    remotePatterns: [
-      {
-        protocol: "https"
-      }
-    ]
-  },
   adapter: vercel(),
   redirects: {
     "/category/imas": "/category/web"

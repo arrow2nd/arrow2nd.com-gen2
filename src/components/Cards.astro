@@ -1,9 +1,8 @@
 ---
-import type { Work } from "@/types/work";
-import { Image } from "astro:assets";
+import type { WorkType } from "@/types/work";
 
 export interface Props {
-  contents: Work[];
+  contents: WorkType[];
 }
 
 const { contents } = Astro.props;
@@ -11,7 +10,7 @@ const { contents } = Astro.props;
 
 <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
   {
-    contents.map(({ id, title, description, images }) => {
+    contents.map(({ id, title, shortDescription, images }) => {
       const thumbnail = images[0];
 
       return (
@@ -21,16 +20,10 @@ const { contents } = Astro.props;
             transition:name={thumbnail.src}
             transition:animate="initial"
           >
-            <Image
-              src={thumbnail.src}
-              alt={thumbnail.altText}
-              width={thumbnail.width}
-              height={thumbnail.height}
-              format={"webp"}
-            />
+            <img src={thumbnail.src} alt={thumbnail.alt} />
           </div>
           <p class="mt-2 font-bold">{title}</p>
-          <p class="text-sm text-sub">{description}</p>
+          <p class="text-sm text-sub">{shortDescription}</p>
         </a>
       );
     })

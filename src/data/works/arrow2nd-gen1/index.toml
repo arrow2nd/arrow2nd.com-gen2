@@ -1,0 +1,31 @@
+id = "arrow2nd-gen1"
+title = "arrow2nd.github.io (Gen 1)"
+shortDescription = "ポートフォリオサイト (1代目)"
+category = "web"
+tags = ["Webサイト", "Vue2"]
+createdAt = "2020-08-01"
+
+[[images]]
+src = "./0_works.png"
+alt = "作品一覧ページ"
+
+[[images]]
+src = "./1_about.png"
+alt = "Aboutページ"
+
+[[images]]
+src = "./2_detail.png"
+alt = "作品詳細ページ"
+
+[[sections]]
+title = "概要"
+body = "初めてフレームワークを使って作った、ポートフォリオ的なサイト。"
+
+[[sections]]
+title = "使用技術"
+body = "Vue 2 / Bootstrap 4 / Fort Awesome / Google Analytics / GitHub Pages"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/arrow2nd.github.io-gen1"
+label = "GitHub"

@@ -1,0 +1,28 @@
+id = "minai"
+title = "minai"
+shortDescription = "よりよいカラースキーム"
+category = "tool"
+tags = ["Vim", "カラースキーム"]
+createdAt = "2024-01-01"
+
+[[images]]
+src = "./0_demo.png"
+alt = "Wezterm + Neovim の表示デモ"
+
+[[sections]]
+title = "概要"
+body = "薬袋カルテさん風味なカラースキーム。"
+
+[[sections]]
+title = "ひとこと"
+body = "WeztermとNeovimに対応しています。"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/dotfiles"
+label = "dotfiles"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/minai"
+label = "for Neovim"

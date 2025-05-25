@@ -6,21 +6,14 @@ import Pager from "@/components/Pager.astro";
 import Title from "@/components/Title.astro";
 import Layout from "@/layouts/Layout.astro";
 
-import { getCategories, getAllWorks } from "@/libs/newt";
+import { getCategories, getAllWorks } from "@/libs/content";
 
 export const getStaticPaths = async ({ paginate }: GetStaticPathsOptions) => {
   const categories = await getCategories();
-
-  const allWorks = await getAllWorks([
-    "id",
-    "title",
-    "description",
-    "images",
-    "category"
-  ]);
+  const allWorks = await getAllWorks();
 
   return categories.flatMap(({ name }) => {
-    const works = allWorks.filter((work) => work.category.name === name);
+    const works = allWorks.filter((work) => work.category === name);
 
     return paginate(works, {
       params: { name },

@@ -1,0 +1,43 @@
+id = "nekome"
+title = "nekome"
+shortDescription = "ねこのための TUI な Twitter クライアント"
+category = "tool"
+tags = ["Twitterクライアント", "Go"]
+createdAt = "2022-05-01"
+
+[[images]]
+src = "./0_logo.png"
+alt = "ロゴ画像"
+
+[[images]]
+src = "./1_timeline.png"
+alt = "タイムライン表示"
+
+[[images]]
+src = "./2_user.png"
+alt = "ユーザー表示"
+
+[[sections]]
+title = "概要"
+body = "ターミナルで動作するTwitterのTUIクライアント。"
+
+[[sections]]
+title = "特徴"
+body = """
+アンケートやピン留めツイート等の表示が行えます。
+タイムラインを自動で更新する疑似Stream Modeもあります。
+"""
+
+[[sections]]
+title = "使用技術"
+body = "Go / Twitter API v2 / GoReleaser / GitHub Actions"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/nekome"
+label = "GitHub"
+
+[[links]]
+icon = "link"
+href = "https://zenn.dev/arrow2nd/articles/4c88a8d43f3a82"
+label = "Zennの記事"

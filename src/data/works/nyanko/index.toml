@@ -1,0 +1,39 @@
+id = "nyanko"
+title = "にゃんこだいせんせぇ"
+shortDescription = "問題を『シュッ』と採点する脳トレゲーム"
+category = "game"
+tags = ["Switch", "プチコン", "パズル"]
+createdAt = "2019-12-01"
+
+[[images]]
+src = "./0_top.png"
+alt = "タイトル画面"
+
+[[images]]
+src = "./1_play.png"
+alt = "プレイ画面"
+
+[[images]]
+src = "./2_result.png"
+alt = "リザルト画面"
+
+[[images]]
+src = "./3_rank.png"
+alt = "ランク画面"
+
+[[sections]]
+title = "概要"
+body = "問題とその答えが合っているかどうか、素早く「シュッ」と採点する脳トレゲーム。"
+
+[[sections]]
+title = "コンテスト"
+body = "第五回プチコン大喜利 TSUKUMO 賞を頂きました 🎉"
+
+[[sections]]
+title = "公開キー"
+body = "4NKEKN4XS"
+
+[[links]]
+icon = "link"
+href = "https://www.petc4.smilebasic.com/blank-2"
+label = "プチコン大喜利結果発表"

@@ -1,0 +1,34 @@
+id = "codic-cli"
+title = "codic-cli"
+shortDescription = "codic の CLI クライアント"
+category = "tool"
+tags = ["CLI", "便利ツール", "Go"]
+createdAt = "2021-12-01"
+
+[[images]]
+src = "./0_run.png"
+alt = "実行画面"
+
+[[images]]
+src = "./1_config.png"
+alt = "設定を変更しているところ"
+
+[[sections]]
+title = "概要"
+body = "プログラマ向けネーミング生成サービス「codic」の CLI クライアント。"
+
+[[sections]]
+title = "特徴"
+body = """
+日本語からネーミングを生成することができます。
+よく使う命名規則をあらかじめ設定しておくことも可能です。
+"""
+
+[[sections]]
+title = "使用技術"
+body = "Go / codic API / GoReleaser / GitHub Actions"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/codic-cli"
+label = "GitHub"

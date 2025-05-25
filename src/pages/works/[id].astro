@@ -3,7 +3,7 @@ import Carousel from "@/components/Carousel.astro";
 import Dots from "@/components/Dots.astro";
 import Sections from "@/components/Sections.astro";
 import Layout from "@/layouts/Layout.astro";
-import { getAllWorks } from "@/libs/newt";
+import { getAllWorks } from "@/libs/content";
 
 export async function getStaticPaths() {
   const works = await getAllWorks();
@@ -14,12 +14,18 @@ export async function getStaticPaths() {
   }));
 }
 
-const { title, description, tags, images, sections, links } = Astro.props;
+const { title, shortDescription, tags, createdAt, images, sections, links } =
+  Astro.props;
 
 const ogpImageUrl = images[0].src;
 ---
 
-<Layout title={title} description={description} imageUrl={ogpImageUrl} article>
+<Layout
+  title={title}
+  description={shortDescription}
+  imageUrl={ogpImageUrl}
+  article
+>
   <div class="space-y-6">
     <div>
       <Carousel images={images} />
@@ -28,7 +34,7 @@ const ogpImageUrl = images[0].src;
       </h1>
       <div class="mt-1 space-x-1">
         {
-          tags.map(({ name }) => (
+          tags.map((name) => (
             <a class="text-base text-sea hover:underline" href={`/tag/${name}`}>
               #{name}
             </a>
@@ -37,6 +43,6 @@ const ogpImageUrl = images[0].src;
       </div>
     </div>
     <Dots count={4} />
-    <Sections contents={sections} links={links} />
+    <Sections createdAt={createdAt} contents={sections} links={links} />
   </div>
 </Layout>

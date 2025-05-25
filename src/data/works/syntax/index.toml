@@ -1,0 +1,33 @@
+id = "syntax"
+title = "#syntax"
+shortDescription = "パネルを並び替えて命令文をつくるパズル"
+category = "game"
+tags = ["Switch", "プチコン", "パズル"]
+createdAt = "2020-05-01"
+
+[[images]]
+src = "./0_top.png"
+alt = "タイトル画面"
+
+[[images]]
+src = "./1_play.png"
+alt = "プレイ画面"
+
+[[images]]
+src = "./2_record.png"
+alt = "レコード画面"
+
+[[sections]]
+title = "概要"
+body = "文字のパネルをタッチ操作で並び替えて、プチコンの命令文をつくるパズルゲーム。"
+
+[[sections]]
+title = "ひとこと"
+body = """
+遊びながら命令が覚えられたらいいな〜と思ったので作りました。
+これで覚えられるかは謎です……。
+"""
+
+[[sections]]
+title = "公開キー"
+body = "4VKS8XDEF"

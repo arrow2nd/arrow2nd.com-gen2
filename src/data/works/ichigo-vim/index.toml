@@ -1,0 +1,27 @@
+id = "ichigo-vim"
+title = "ichigo.vim"
+shortDescription = "IchigoJam web for Vim"
+category = "tool"
+tags = ["Vim", "IchigoJam", "便利ツール"]
+createdAt = "2022-11-01"
+
+[[images]]
+src = "./0_demo.png"
+alt = "動作デモ"
+
+[[sections]]
+title = "概要"
+body = "IchigoJam web を Vim から良い感じに使うためのプラグイン。"
+
+[[sections]]
+title = "特徴"
+body = "ホットリロードにも対応しています。"
+
+[[sections]]
+title = "使用技術"
+body = "Deno / JavaScript / TypeScript / Vim Script / denops.vim / WebSocket"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/ichigo.vim"
+label = "GitHub"

@@ -1,0 +1,43 @@
+id = "produce"
+title = "プロデュースノート！"
+shortDescription = "アイマスアイドルを検索できる LINE Bot"
+category = "tool"
+tags = ["im@s", "LINE Bot", "便利ツール", "im@sparql"]
+createdAt = "2020-03-01"
+
+[[images]]
+src = "./0_demo.png"
+alt = "デモ画像"
+
+[[images]]
+src = "./1_multi.png"
+alt = "複数検索結果"
+
+[[images]]
+src = "./2_birthday.png"
+alt = "誕生日検索結果"
+
+[[sections]]
+title = "概要"
+body = "アイドルマスターシリーズのアイドルのプロフィールを検索することができるLINE Bot"
+
+[[sections]]
+title = "特徴"
+body = """
+名前の一部や読みがな、誕生日から検索できます。
+複数のアイドル名を入力して同時に検索することも可能です。
+"""
+
+[[sections]]
+title = "使用技術"
+body = "Deno / TypeScript / Hono / LINE Messaging API / im@sparql (SPARQL) / Deno Deploy / GitHub Actions"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/linebot-imas"
+label = "GitHub"
+
+[[links]]
+icon = "line-line"
+href = "https://line.me/R/ti/p/%40319rwvnv"
+label = "友だち登録"

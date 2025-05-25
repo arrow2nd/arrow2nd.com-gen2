@@ -1,0 +1,53 @@
+id = "mj-sw"
+title = "まーじゃんのようなもの。for Switch"
+shortDescription = "Switch で遊べる 4人打ち麻雀ゲーム"
+category = "game"
+tags = ["Switch", "プチコン", "麻雀"]
+createdAt = "2019-08-01"
+
+[[images]]
+src = "./0_top.png"
+alt = "タイトル画面"
+
+[[images]]
+src = "./1_menu.png"
+alt = "メニュー画面"
+
+[[images]]
+src = "./2_play.png"
+alt = "プレイ画面"
+
+[[images]]
+src = "./3_result.png"
+alt = "リザルト画面"
+
+[[images]]
+src = "./4_edit.png"
+alt = "ねこエディット画面"
+
+[[sections]]
+title = "概要"
+body = "プチコン4 (Switch) で遊べる、やさしい4人打ち麻雀ゲーム。"
+
+[[sections]]
+title = "特徴"
+body = """
+捨て牌サポート機能「ねこのて」や、対局中も確認できる役図鑑を搭載。
+ローカル役やルールの詳細設定、ねこをカスタマイズする機能もあります。"
+"""
+
+[[sections]]
+title = "ひとこと"
+body = """
+「誰でも遊べる明るい麻雀」をコンセプトに制作しました。
+サポート機能が充実しているので、麻雀を初めたい！という方におすすめです。
+"""
+
+[[sections]]
+title = "公開キー"
+body = "4NZS5D323"
+
+[[links]]
+icon = "link"
+href = "https://smilebasic.kurun96.com/work/4NZS5D323/"
+label = "作品詳細サイト"

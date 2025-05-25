@@ -1,0 +1,26 @@
+id = "neko-nobiru"
+title = "ねこ、のびる。"
+shortDescription = "ねこがのびるタイムアタックゲーム"
+category = "game"
+tags = ["Windowsゲーム"]
+createdAt = "2020-09-01"
+
+[[images]]
+src = "./0_title.png"
+alt = "タイトル画面"
+
+[[images]]
+src = "./1_wait.png"
+alt = "プレイ画面"
+
+[[sections]]
+title = "概要"
+body = "紫の毒りんごを避けつつ、ねこを伸び縮みさせて1分間りんごを食べ続けるタイムアタックゲーム。"
+
+[[sections]]
+title = "特徴"
+body = "外部ファイルの素材を一切使用せず、標準のグラフィック描画命令のみで構成しています。"
+
+[[sections]]
+title = "使用技術"
+body = "C++ / DirectX 11"

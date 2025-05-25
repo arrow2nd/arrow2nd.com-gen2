@@ -1,0 +1,35 @@
+id = "idol-birthday-2"
+title = "idol-birthday"
+shortDescription = "アイドルのお誕生日をカウントダウン"
+category = "web"
+tags = ["im@s", "Webサイト",  "im@sparql"]
+createdAt = "2023-08-01"
+
+[[images]]
+src = "./0_home.png"
+alt = "トップページ"
+
+[[images]]
+src = "./1_countdown.png"
+alt = "カウントダウンページ"
+
+[[images]]
+src = "./2_hpb.png"
+alt = "誕生日演出"
+
+[[sections]]
+title = "概要"
+body = "アイドルマスターシリーズに登場するアイドル・スタッフのお誕生日をカウントダウンするサイト。"
+
+[[sections]]
+title = "ひとこと"
+body = "Remix と daisyUI を触るついでに、以前突貫で作ったものをリメイクしたものです。"
+
+[[sections]]
+title = "使用技術"
+body = "Remix / TypeScript / Tailwind CSS / daisyUI / im@sparql (SPARQL) / Vercel / Cloudinary"
+
+[[links]]
+icon = "github-line"
+href = "https://idol-birthday.vercel.app/"
+label = "お誕生日まで…？"

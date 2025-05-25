@@ -1,0 +1,39 @@
+id = "arrow2nd-2"
+title = "arrow2nd.github.io (Gen 2)"
+shortDescription = "ポートフォリオサイト (2代目)"
+category = "web"
+tags = ["Webサイト", "Gatsby"]
+createdAt = "2021-03-01"
+
+[[images]]
+src = "./0_top.png"
+alt = "トップページ"
+
+[[images]]
+src = "./1_about.png"
+alt = "Aboutページ"
+
+[[images]]
+src = "./2_works.png"
+alt = "Worksページ"
+
+[[images]]
+src = "./3_detail.png"
+alt = "作品詳細ページ"
+
+[[sections]]
+title = "概要"
+body = "ポートフォリオ的なサイト。"
+
+[[sections]]
+title = "ひとこと"
+body = "Vue から React へ移行するとともに、デザインを刷新しました。"
+
+[[sections]]
+title = "使用技術"
+body = "Gatsby / Semantic UI / GitHub Pages"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/arrow2nd.github.io-gen2"
+label = "GitHub"

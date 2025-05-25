@@ -1,0 +1,27 @@
+id = "cat-1"
+title = "ねこのようなもの。"
+shortDescription = "日常生活で使いやすい ねこのスタンプ"
+category = "sticker"
+tags = ["ねこのようなもの"]
+createdAt = "2018/11/02"
+
+[[images]]
+src = "./0.png"
+alt = "ねこのようなもののスタンプ"
+
+[[images]]
+src = "./1.png"
+alt = "ねこのようなもののスタンプ"
+
+[[sections]]
+title = "概要"
+body = "使い勝手の良い語彙が揃った、スタンダードなねこのスタンプです。"
+
+[[sections]]
+title = "ひとこと"
+body = "初めてリリースしたスタンプです 😺"
+
+[[links]]
+icon = "line-line"
+href = "https://store.line.me/stickershop/product/5233786"
+label = "LINE STORE"

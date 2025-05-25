@@ -1,15 +1,15 @@
 ---
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
 
 import iconImage from "@/assets/icon.png";
 import Sections from "@/components/Sections.astro";
 import Title from "@/components/Title.astro";
 import Layout from "@/layouts/Layout.astro";
-import { getAboutSections, getCareer } from "@/libs/newt";
-import { Icon } from "astro-icon/components";
+import { getAboutSections, getCareers } from "@/libs/content";
 
 const about = await getAboutSections();
-const carrer = await getCareer();
+const carrer = await getCareers();
 
 const carrerMax = carrer.length - 1;
 ---
@@ -27,7 +27,7 @@ const carrerMax = carrer.length - 1;
     <h2 class="mb-2 font-bold text-xl">経歴</h2>
     <div class="ml-2">
       {
-        carrer.map(({ label, icon, title, body }, i) => (
+        carrer.map(({ title, employmentPeriod, jobName, icon }, i) => (
           <div class="flex space-x-4 text-main">
             <div class="flex flex-col items-center">
               <div
@@ -40,9 +40,9 @@ const carrerMax = carrer.length - 1;
             </div>
 
             <div class="my-2 text-sub text-sm">
-              <p>{label}</p>
+              <p>{employmentPeriod}</p>
               <p class="text-main text-base tracking-wider">{title}</p>
-              <p>{body}</p>
+              <p>{jobName}</p>
             </div>
           </div>
         ))

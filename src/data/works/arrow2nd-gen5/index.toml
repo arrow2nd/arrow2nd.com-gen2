@@ -1,0 +1,42 @@
+id = "arrow2nd-gen5"
+title = "www.arrow2nd.com (Gen 5)"
+shortDescription = "ポートフォリオサイトのようなもの (5代目)"
+category = "web"
+tags = ["Webサイト", "Astro"]
+createdAt = "2023-06-01"
+
+[[images]]
+src = "./0_top.png"
+alt = "トップページ"
+
+[[images]]
+src = "./1_about.png"
+alt = "aboutページ"
+
+[[images]]
+src = "./2_categories.png"
+alt = "作品一覧ページ"
+
+[[images]]
+src = "./3_works.png"
+alt = "作品ページ"
+
+[[sections]]
+title = "概要"
+body = "ポートフォリオのようなサイト。"
+
+[[sections]]
+title = "ひとこと"
+body = """
+Astro に入門したくて作りなおしました 🚀
+デザインもちょっと変えてます。
+"""
+
+[[sections]]
+title = "使用技術"
+body = "Astro / TypeScript / Tailwind CSS / Swiper / Vercel"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/arrow2nd.com-gen2"
+label = "GitHub"

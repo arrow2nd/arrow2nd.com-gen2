@@ -1,0 +1,40 @@
+id = "shiny-poems"
+title = "ShinyPoems"
+shortDescription = "シャニマス衣装ポエム検索"
+category = "web"
+tags = ["im@s", "シャニマス", "Webサイト", "Next.js", "im@sparql"]
+createdAt = "2021-04-01"
+
+[[images]]
+src = "./0_logo.png"
+alt = "ロゴ画像"
+
+[[images]]
+src = "./1_result.png"
+alt = "検索結果"
+
+[[images]]
+src = "./2_share.png"
+alt = "SNSでの共有例"
+
+[[sections]]
+title = "概要"
+body = "ゲーム「アイドルマスターシャイニーカラーズ」に登場する、衣装説明の検索ができる Web アプリ。"
+
+[[sections]]
+title = "特徴"
+body = "すきなポエムを SNS 等で共有することができます。"
+
+[[sections]]
+title = "使用技術"
+body = "Next.js / TypeScript / Tailwind CSS / im@sparql (SPARQL) / Jest / Playwright / Vercel / GitHub Actions"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/shiny-poems"
+label = "GitHub"
+
+[[links]]
+icon = "link"
+href = "https://shiny-poems.vercel.app/"
+label = "ShinyPoems"

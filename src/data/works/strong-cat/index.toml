@@ -1,0 +1,30 @@
+id = "strong-cat"
+title = "つよい！ねこのようなもの。"
+shortDescription = "つよくなった ねこのスタンプ"
+category = "sticker"
+tags = ["ねこのようなもの"]
+createdAt = "2022/02/26"
+
+[[images]]
+src = "./0.png"
+alt = "つよい！ねこのようなもの。のスタンプ"
+
+[[images]]
+src = "./1.png"
+alt = "つよい！ねこのようなもの。のスタンプ"
+
+[[sections]]
+title = "概要"
+body = """
+ねこたちがつよくなって帰ってきた！
+麻雀がしたい ねこのスタンプです。
+"""
+
+[[sections]]
+title = "ひとこと"
+body = "サメもいます 🦈"
+
+[[links]]
+icon = "line-line"
+href = "https://store.line.me/stickershop/product/18567071"
+label = "LINE STORE"

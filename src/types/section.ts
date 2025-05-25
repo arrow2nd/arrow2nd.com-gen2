@@ -1,6 +1,8 @@
-import type { Content } from "newt-client-js";
+import { z } from "astro:content";
 
-export type Section = {
-  title: string;
-  text: string;
-} & Content;
+export const SectionSchema = z.object({
+  title: z.string(),
+  body: z.string(),
+});
+
+export type SectionType = z.infer<typeof SectionSchema>;

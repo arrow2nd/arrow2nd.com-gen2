@@ -1,0 +1,37 @@
+id = "mj-3ds"
+title = "まーじゃんのようなもの。ぷち"
+shortDescription = "3DS で遊べる 4人打ち麻雀ゲーム"
+category = "game"
+tags = ["3DS", "プチコン", "麻雀"]
+createdAt = "2016-12-01"
+
+[[images]]
+src = "./0_top.png"
+alt = "トップ画面"
+
+[[images]]
+src = "./1_play.png"
+alt = "プレイ画面"
+
+[[images]]
+src = "./2_support.png"
+alt = "サポート機能の画面"
+
+[[images]]
+src = "./3_result.png"
+alt = "対局結果画面"
+
+[[sections]]
+title = "概要"
+body = "プチコン3号 (3DS) で遊べる、4人打ち麻雀ゲーム。"
+
+[[sections]]
+title = "特徴"
+body = """
+役図鑑が対局中でも確認できるので、初心者の方でもあんしん。
+ローカル役も多数採用しています。
+"""
+
+[[sections]]
+title = "公開キー"
+body = "4BL47E4V"
