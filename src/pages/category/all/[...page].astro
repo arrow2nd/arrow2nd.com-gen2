@@ -4,12 +4,11 @@ import CategoryTab from "@/components/CategoryTab.astro";
 import Pager from "@/components/Pager.astro";
 import Title from "@/components/Title.astro";
 import Layout from "@/layouts/Layout.astro";
-import { getCategories, getAllWorks } from "@/libs/newt";
+import { getCategories, getAllWorks } from "@/libs/content";
 import type { GetStaticPathsOptions } from "astro";
 
 export const getStaticPaths = async ({ paginate }: GetStaticPathsOptions) => {
-  const works = await getAllWorks(["id", "title", "description", "images"]);
-
+  const works = await getAllWorks();
   return paginate(works, { pageSize: 12 });
 };
 

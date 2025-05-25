@@ -2,20 +2,18 @@
 import type { GetStaticPathsOptions } from "astro";
 
 import Layout from "@/layouts/Layout.astro";
-import { getAllWorks } from "@/libs/newt";
+import { getAllWorks } from "@/libs/content";
 import Title from "@/components/Title.astro";
 import Cards from "@/components/Cards.astro";
 import Pager from "@/components/Pager.astro";
 
 export const getStaticPaths = async ({ paginate }: GetStaticPathsOptions) => {
   const allWorks = await getAllWorks();
-  const allTags = [
-    ...new Set(allWorks.flatMap(({ tags }) => tags.map(({ name }) => name)))
-  ];
+  const allTags = [...new Set(allWorks.flatMap(({ tags }) => tags))];
 
   return allTags.flatMap((name) => {
     const works = allWorks.filter((work) =>
-      work.tags.some((tag) => tag.name === name)
+      work.tags.some((tag) => tag === name)
     );
 
     return paginate(works, {

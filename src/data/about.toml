@@ -1,0 +1,44 @@
+[[sections]]
+id = "about"
+title = "はじめまして、あろーです。"
+body = "なんかつくったり、つくらなかったりします。\nフランスパンとチョコミントがすきです。"
+
+[[sections]]
+id = "favorite"
+title = "好き"
+body = "デレマス / シャニマス / ARIA / 上伊那ぼたん / 薬袋カルテ"
+
+[[sections]]
+id = "more-favorite"
+title = "これも好き"
+body = "フレデリック / 花奏かのん / 長瀬有花 / somunia / Aiobahn / 中村さんそ / VALIS"
+
+[[sections]]
+id = "cats"
+title = "好きなねこ"
+body = "エキゾチックショートヘア"
+
+[[sections]]
+id = "dogs"
+title = "好きないぬ"
+body = "ペキニーズ"
+
+[[sections]]
+id = "favorite-editor"
+title = "好きなエディタ"
+body = "Neovim"
+
+[[sections]]
+id = "interest"
+title = "きょうみ"
+body = "Webフロントエンド / UIデザイン / 開発環境 / CI・CD"
+
+[[sections]]
+id = "skills"
+title = "スキル"
+body = "C / JavaScript / TypeScript / SmileBASIC / React / GitHub Actions / GitLab CI / Playwright"
+
+[[sections]]
+id = "chot-wakaru"
+title = "ちょっとわかる"
+body = "Go / Next.js / Remix / Figma"

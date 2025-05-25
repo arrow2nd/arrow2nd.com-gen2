@@ -1,9 +1,8 @@
 ---
-import { Image } from "astro:assets";
-import type { Image as WorkImage } from "newt-client-js";
+import type { ImageType } from "@/types/image";
 
 export interface Props {
-  images: WorkImage[];
+  images: ImageType[];
 }
 
 const { images } = Astro.props;
@@ -19,17 +18,9 @@ const isMultiple = images.length > 1;
   transition:animate="initial"
 >
   {
-    images.map(({ src, altText, width, height }) => (
+    images.map(({ src, alt }) => (
       <swiper-slide class="flex-shrink-0">
-        <Image
-          class="w-full h-full"
-          src={src}
-          alt={altText}
-          width={width}
-          height={height}
-          format="webp"
-          loading="eager"
-        />
+        <img class="w-full h-full" src={src} alt={alt} loading="eager" />
       </swiper-slide>
     ))
   }
@@ -44,16 +35,9 @@ const isMultiple = images.length > 1;
       slides-per-view="6"
       watch-slides-progress="true"
     >
-      {images.map(({ src, altText, width, height }) => (
+      {images.map(({ src, alt }) => (
         <swiper-slide class="cursor-pointer border-neutral-200 border-2 transition-colors">
-          <Image
-            src={src}
-            alt={altText}
-            width={width * 0.1}
-            height={height * 0.1}
-            format="webp"
-            loading="eager"
-          />
+          <img src={src} alt={alt} loading="eager" />
         </swiper-slide>
       ))}
     </swiper-container>

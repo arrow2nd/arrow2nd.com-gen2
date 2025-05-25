@@ -1,5 +1,8 @@
-import type { Content } from "newt-client-js";
+import { z } from "astro:content";
 
-export type Category = {
-  name: string;
-} & Content;
+export const CategorySchema = z.object({
+  id: z.string(),
+  name: z.string(),
+});
+
+export type CategoryType = z.infer<typeof CategorySchema>;

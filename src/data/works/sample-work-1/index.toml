@@ -1,0 +1,28 @@
+id = "sample-work-1"
+title = "サンプル作品1"
+shortDescription = "これはサンプルの作品です"
+category = "web"
+tags = ["React", "TypeScript", "Astro"]
+createdAt = "2023-10-01"
+
+[[images]]
+src = "./sample.png"
+alt = "サンプル作品1のスクリーンショット"
+
+[[sections]]
+title = "概要"
+body = "この作品は○○を目的として作成されました。"
+
+[[sections]]
+title = "技術スタック"
+body = "React, TypeScript, Astroを使用して開発しました。"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/example/sample-work-1"
+label = "GitHub"
+
+[[links]]
+icon = "external-link-line"
+href = "https://example.com"
+label = "デモサイト"

@@ -1,11 +1,11 @@
 ---
-import type { Section } from "@/types/section";
-import type { Link as WorkLink } from "@/types/work";
+import type { SectionType } from "@/types/section";
+import type { WorkType } from "@/types/work";
 import Link from "./Link.astro";
 
 export interface Props {
-  contents: Section[];
-  links?: WorkLink[];
+  contents: SectionType[];
+  links?: WorkType["links"];
 }
 
 const { contents, links } = Astro.props;
@@ -14,10 +14,10 @@ const existLinks = links && links.length > 0;
 
 <div class="space-y-6">
   {
-    contents.map(({ title, text }) => (
+    contents.map(({ title, body }) => (
       <section>
         <h2 class="mb-2 font-bold text-xl">{title}</h2>
-        <p class="text-sub whitespace-pre-line">{text}</p>
+        <p class="text-sub whitespace-pre-line">{body}</p>
       </section>
     ))
   }
@@ -26,8 +26,8 @@ const existLinks = links && links.length > 0;
       <section>
         <h2 class="mb-2 font-bold text-xl">外部リンク</h2>
         <div class="md:flex md:flex-wrap space-y-1 md:space-y-0 md:space-x-4">
-          {links.map(({ href, icon, text }) => (
-            <Link href={href} icon={`ri:${icon}`} text={text} targetBlank />
+          {links.map(({ href, icon, label }) => (
+            <Link href={href} icon={`ri:${icon}`} text={label} targetBlank />
           ))}
         </div>
       </section>

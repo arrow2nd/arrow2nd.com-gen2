@@ -1,24 +1,24 @@
-import type { Content, Image } from "newt-client-js";
-import type { Category } from "./category";
-import type { Section } from "./section";
+import { z } from "astro:content";
+import { SectionSchema } from "./section";
+import { CategorySchema } from "./category";
+import { ImageSchema } from "./image";
 
-export type Tag = {
-  name: string;
-};
+export const WorkSchema = z.object({
+  id: z.string(),
+  title: z.string(),
+  shortDescription: z.string(),
+  category: CategorySchema.shape.id,
+  tags: z.array(z.string()),
+  createdAt: z.string(),
+  images: ImageSchema.array(),
+  sections: SectionSchema.array(),
+  links: z.array(
+    z.object({
+      icon: z.string(),
+      href: z.string(),
+      label: z.string(),
+    }),
+  ),
+});
 
-export type Link = {
-  icon: string;
-  href: string;
-  text: string;
-};
-
-export type Work = {
-  id: string;
-  images: Image[];
-  category: Category;
-  title: string;
-  description: string;
-  tags: Tag[];
-  sections: Section[];
-  links: Link[];
-} & Content;
+export type WorkType = z.infer<typeof WorkSchema>;
