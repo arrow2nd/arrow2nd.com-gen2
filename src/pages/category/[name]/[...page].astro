@@ -13,7 +13,7 @@ export const getStaticPaths = async ({ paginate }: GetStaticPathsOptions) => {
   const allWorks = await getAllWorks();
 
   return categories.flatMap(({ name }) => {
-    const works = allWorks.filter((work) => work.category.name === name);
+    const works = allWorks.filter((work) => work.category === name);
 
     return paginate(works, {
       params: { name },
