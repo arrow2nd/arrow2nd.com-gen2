@@ -4,11 +4,21 @@ import type { WorkType } from "@/types/work";
 import Link from "./Link.astro";
 
 export interface Props {
+  createdAt: string;
   contents: SectionType[];
   links?: WorkType["links"];
 }
 
 const { contents, links } = Astro.props;
+
+const createdAtStr = new Date(Astro.props.createdAt).toLocaleDateString(
+  "ja-JP",
+  {
+    year: "numeric",
+    month: "2-digit"
+  }
+);
+
 const existLinks = links && links.length > 0;
 ---
 
@@ -21,6 +31,10 @@ const existLinks = links && links.length > 0;
       </section>
     ))
   }
+  <section>
+    <h2 class="mb-2 font-bold text-xl">制作時期</h2>
+    <p class="text-sub whitespace-pre-line">{createdAtStr}</p>
+  </section>
   {
     existLinks && (
       <section>

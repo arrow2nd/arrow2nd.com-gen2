@@ -12,13 +12,15 @@ export const WorkSchema = z.object({
   createdAt: z.string(),
   images: ImageSchema.array(),
   sections: SectionSchema.array(),
-  links: z.array(
-    z.object({
-      icon: z.string(),
-      href: z.string(),
-      label: z.string(),
-    }),
-  ),
+  links: z
+    .array(
+      z.object({
+        icon: z.string(),
+        href: z.string(),
+        label: z.string(),
+      }),
+    )
+    .optional(),
 });
 
 export type WorkType = z.infer<typeof WorkSchema>;
