@@ -1,0 +1,23 @@
+id = "aqua"
+title = "aqua"
+shortDescription = "いい感じのカラースキーム"
+category = "tool"
+tags = ["Vim", "カラースキーム",]
+createdAt = "2023-07-01"
+
+[[images]]
+src = "./0_nvim.png"
+alt = "aquaを適用したNeovim"
+
+[[sections]]
+title = "概要"
+body = "iceberg.vim を意識しつつ、より青を強調した Neovim のカラースキーム。"
+
+[[sections]]
+title = "使用技術"
+body = "estilo"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/aqua"
+label = "GitHub"

@@ -1,0 +1,27 @@
+id = "prog-cat"
+title = "進捗とたたかうねこ。"
+shortDescription = "進捗をやさしく尋ねる ねこのスタンプ"
+category = "sticker"
+tags = ["ねこのようなもの"]
+createdAt = "2019/04/06"
+
+[[images]]
+src = "./0.png"
+alt = "進捗とたたかうねこ。のスタンプ"
+
+[[images]]
+src = "./1.png"
+alt = "進捗とたたかうねこ。のスタンプ"
+
+[[sections]]
+title = "概要"
+body = "進捗を「聞く」「伝える」ことに特化した、ねこのスタンプです。"
+
+[[sections]]
+title = "ひとこと"
+body = "進捗をやさしく聞いてほしかったので作りました。"
+
+[[links]]
+icon = "line-line"
+href = "https://store.line.me/stickershop/product/7224768"
+label = "LINE STORE"

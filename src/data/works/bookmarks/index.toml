@@ -1,0 +1,40 @@
+id = "bookmarks"
+title = "Bookmarks"
+shortDescription = "公開ブックマーク置き場"
+category = "web"
+tags = ["Webサイト", "Fresh"]
+createdAt = "2023-11-01"
+
+[[images]]
+src = "./0_top.png"
+alt = "トップページ"
+
+[[images]]
+src = "./1_results.png"
+alt = "検索デモ"
+
+[[sections]]
+title = "概要"
+body = "私のブックマークを検索できる Web アプリ。"
+
+[[sections]]
+title = "特徴"
+body = "リポジトリ上でブックマークを管理していて、Issueを建てることで追加・削除できます。"
+
+[[sections]]
+title = "ひとこと"
+body = "異なるブラウザ間でのブックマーク同期が面倒になったのでつくりました。"
+
+[[sections]]
+title = "使用技術"
+body = "Deno / Fresh / Twind / GitHub Actions / Deno Deploy"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/bookmarks"
+label = "GitHub"
+
+[[links]]
+icon = "link"
+href = "https://bookmarks.arrow2nd.com/"
+label = "ブックマークをみる"

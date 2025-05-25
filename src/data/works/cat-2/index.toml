@@ -1,0 +1,30 @@
+id = "cat-2"
+title = "ねこのようなもの。2"
+shortDescription = "5匹のねこのごちゃまぜスタンプ"
+category = "sticker"
+tags = ["ねこのようなもの"]
+createdAt = "2019/01/24"
+
+[[images]]
+src = "./0.png"
+alt = "ねこのようなもの。2のスタンプ"
+
+[[images]]
+src = "./1.png"
+alt = "ねこのようなもの。2のスタンプ"
+
+[[sections]]
+title = "概要"
+body = """
+敬語から関西弁まで。
+古今東西、いろんなシーンで使えます。
+"""
+
+[[sections]]
+title = "ひとこと"
+body = "うに"
+
+[[links]]
+icon = "line-line"
+href = "https://store.line.me/stickershop/product/6419151"
+label = "LINE STORE"

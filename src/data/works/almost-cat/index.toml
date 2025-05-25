@@ -1,0 +1,27 @@
+id = "almost-cat"
+title = "だいたいねこのようなもの"
+shortDescription = "とても一般的な ねこのスタンプ"
+category = "sticker"
+tags = ["ねこのようなもの"]
+createdAt = "2019/12/27"
+
+[[images]]
+src = "./0.png"
+alt = "だいたいねこのようなもの のスタンプ"
+
+[[images]]
+src = "./1.png"
+alt = "だいたいねこのようなもの のスタンプ"
+
+[[sections]]
+title = "概要"
+body = "そこそこ口が悪い ねこのスタンプです。"
+
+[[sections]]
+title = "ひとこと"
+body = "1回リジェクトされました。"
+
+[[links]]
+icon = "line-line"
+href = "https://store.line.me/stickershop/product/10319642"
+label = "LINE STORE"

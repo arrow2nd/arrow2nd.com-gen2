@@ -1,0 +1,35 @@
+id = "rdf-maker"
+title = "Idol RDF Maker"
+shortDescription = "im@sparql のデータ作成支援ツール"
+category = "tool"
+tags = ["VSCode拡張", "im@sparql", "便利ツール"]
+createdAt = "2022-04-01"
+
+[[images]]
+src = "./0_demo.png"
+alt = "使用例"
+
+[[sections]]
+title = "概要"
+body = "im@sparqlのRDFデータ作成をちょっとだけサポートするVSCode拡張。"
+
+[[sections]]
+title = "ひとこと"
+body = """
+衣装・ユニット・ライブ・ランキングなどの RDF データを対話形式で作成できます。
+入力ミスを防ぎつつ、効率よくデータを編集したかったのでつくりました。
+"""
+
+[[sections]]
+title = "使用技術"
+body = "Node.js / TypeScript / webpack / im@sparql (SPARQL) / GitHub Actions"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/idol-rdf-maker"
+label = "GitHub"
+
+[[links]]
+icon = "download-line"
+href = "https://marketplace.visualstudio.com/items?itemName=arrow2nd.idol-rdf-maker"
+label = "VSCodeに追加"

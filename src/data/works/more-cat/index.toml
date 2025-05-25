@@ -1,0 +1,27 @@
+id = "more-cat"
+title = "もっと！ねこのようなもの。"
+shortDescription = "よく使うワードを集めた ねこのスタンプ"
+category = "sticker"
+tags = ["ねこのようなもの"]
+createdAt = "2020/07/22"
+
+[[images]]
+src = "./0.png"
+alt = "もっと！ねこのようなもの。のスタンプ"
+
+[[images]]
+src = "./1.png"
+alt = "もっと！ねこのようなもの。のスタンプ"
+
+[[sections]]
+title = "概要"
+body = "ふっくらしたねこの、ちょっと使いやすいスタンプです。"
+
+[[sections]]
+title = "ひとこと"
+body = "シリーズ史上、最も表情が豊かと言われています。"
+
+[[links]]
+icon = "line-line"
+href = "https://store.line.me/stickershop/product/12664864"
+label = "LINE STORE"

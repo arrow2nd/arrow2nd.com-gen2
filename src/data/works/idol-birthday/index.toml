@@ -1,0 +1,38 @@
+id = "idol-birthday"
+title = "アイマスアイドルのお誕生日まで…？"
+shortDescription = "アイドルのお誕生日までをカウントダウン"
+category = "web"
+tags = ["im@s", "Webサイト", "Next.js", "im@sparql"]
+createdAt = "2022-04-01"
+
+[[images]]
+src = "./0_top.png"
+alt = "トップページ"
+
+[[images]]
+src = "./1_countdown.png"
+alt = "カウントダウンページ"
+
+[[images]]
+src = "./2_share.png"
+alt = "SNSでの共有例"
+
+[[sections]]
+title = "概要"
+body = "アイドルマスターシリーズに登場する全アイドルの「お誕生日までの秒数」をカウントダウンするサイト。"
+
+[[sections]]
+title = "ひとこと"
+body = """
+以前に作った「morino」の全アイドル対応版です。
+白菊ほたるさんのお誕生日に間に合うよう突貫で作りました。
+"""
+
+[[sections]]
+title = "使用技術"
+body = "Next.js / TypeScript / Tailwind CSS / im@sparql (SPARQL) / Vercel / Cloudinary / Github Actions"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/idol-birthday-countdown"
+label = "GitHub"

@@ -1,0 +1,26 @@
+id = "neko-tobu"
+title = "ねこ、とぶ。"
+shortDescription = "片手で遊べるカジュアルなアクションゲーム"
+category = "game"
+tags = ["Androidゲーム"]
+createdAt = "2021-05-01"
+
+[[images]]
+src = "./0_logo.png"
+alt = "ロゴ画像"
+
+[[images]]
+src = "./1_app.png"
+alt = "ゲーム画面"
+
+[[sections]]
+title = "概要"
+body = "傾け操作でねこを動かして足場を踏み、飛んで飛んで飛びまくるゲーム。"
+
+[[sections]]
+title = "特徴"
+body = "操作方法はスマホを傾けるだけ。誰でも手軽に、ゆるーく遊ぶことができます。"
+
+[[sections]]
+title = "使用技術"
+body = "Java"

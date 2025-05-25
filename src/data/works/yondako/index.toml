@@ -1,0 +1,48 @@
+id = "yondako"
+title = "yondako"
+shortDescription = "シンプルな読書記録サービス"
+category = "web"
+tags = ["Webサービス", "積読", "Next.js"]
+createdAt = "2024-07-01"
+
+[[images]]
+src = "./0_logo.png"
+alt = "ロゴ"
+
+[[images]]
+src = "./1_library.png"
+alt = "ライブラリページ"
+
+[[images]]
+src = "./2_dialog.png"
+alt = "書籍ダイアログ"
+
+[[images]]
+src = "./3_mobile-library.png"
+alt = "スマホでのライブラリページ"
+
+[[images]]
+src = "./4_mobile-scanner.png"
+alt = "スマホでの書籍バーコードスキャン"
+
+[[sections]]
+title = "概要"
+body = "\"よんだこと\"をわすれないための読書記録サービス。"
+
+[[sections]]
+title = "ひとこと"
+body = "積読の管理に読書メーターを使っていたものの、自分には機能が多いな〜と思ったのでつくりました。"
+
+[[sections]]
+title = "使用技術"
+body = "Bun / Next.js / Tailwind CSS / Auth.js / Drizzle ORM / Cloudflare Pages / Cloudflare D1 / NDLサーチ API / biome / Storybook / Figma"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/yondako/yondako"
+label = "GitHub"
+
+[[links]]
+icon = "link"
+href = "https://yondako.com"
+label = "yondako"

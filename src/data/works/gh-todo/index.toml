@@ -1,0 +1,27 @@
+id = "gh-todo"
+title = "gh-todo"
+shortDescription = "GitHub CLIでToDo管理"
+category = "tool"
+tags = ["CLI", "便利ツール", "シェルスクリプト"]
+createdAt = "2022-10-01"
+
+[[images]]
+src = "./0_list.png"
+alt = "動作デモ"
+
+[[sections]]
+title = "概要"
+body = "GitHub Issuesで管理しているToDoをいい感じに操作するためのGitHub CLI拡張コマンド。"
+
+[[sections]]
+title = "特徴"
+body = "fzfを使ってプレビューを表示しつつ、ToDoを絞り込むことができます。"
+
+[[sections]]
+title = "使用技術"
+body = "シェルスクリプト（Bash）"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/gh-todo"
+label = "GitHub"

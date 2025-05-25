@@ -1,0 +1,48 @@
+id = "memento"
+title = "memento"
+shortDescription = "常駐型VRC向け自動写真整理ツール"
+category = "tool"
+tags = ["VRChat", "デスクトップアプリ", "便利ツール", "Go"]
+createdAt = "2025-04-01"
+
+[[images]]
+src = "./0_top.png"
+alt = "ロゴと簡易説明"
+
+[[images]]
+src = "./1_taskbar.png"
+alt = "タスクバーに常駐している様子"
+
+[[images]]
+src = "./2_demo.png"
+alt = "ワールド毎に写真が整理されている様子"
+
+[[images]]
+src = "./3_size.png"
+alt = "写真のサイズを小さくしている様子"
+
+[[images]]
+src = "./4_exif.png"
+alt = "EXIF情報を確認している様子"
+
+[[sections]]
+title = "概要"
+body = "タスクバーに常駐して、VRChat内で撮影した写真をワールド毎に自動整理するアプリケーション。"
+
+[[sections]]
+title = "ひとこと"
+body = "カメラ系アバターギミックのデバッグのために色んなところで写真を撮りまくってたら、どれがどこのやつかわかんなくなったのでつくりました。"
+
+[[sections]]
+title = "使用技術"
+body = "Go"
+
+[[links]]
+icon = "download-line"
+href = "https://arrow2nd.booth.pm/items/6801241"
+label = "Booth"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/memento"
+label = "GitHub"

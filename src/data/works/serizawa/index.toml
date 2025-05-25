@@ -1,0 +1,34 @@
+id = "serizawa"
+title = "serizawa"
+shortDescription = "シャニマス非公式専用ブラウザ"
+category = "tool"
+tags = ["im@s", "シャニマス", "デスクトップアプリ", "Electron"]
+createdAt = "2021-08-01"
+
+[[images]]
+src = "./0_logo.png"
+alt = "ロゴ画像"
+
+[[images]]
+src = "./1_demo.png"
+alt = "起動デモ"
+
+[[sections]]
+title = "概要"
+body = "enza対応ゲーム「アイドルマスターシャイニーカラーズ」の非公式専用ブラウザ。"
+
+[[sections]]
+title = "特徴"
+body = """
+ウィンドウが非アクティブになるのを防ぎ、常時コミュを再生することができます。
+1クリックでスクショを保存 & クリップボードへコピーする機能も。
+"""
+
+[[sections]]
+title = "使用技術"
+body = "Electron / React / TypeScript / webpack / Tailwind CSS / GitHub Actions / GitHub REST API"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/serizawa"
+label = "GitHub"

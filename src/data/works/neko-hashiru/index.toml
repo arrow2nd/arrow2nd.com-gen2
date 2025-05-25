@@ -1,0 +1,22 @@
+id = "neko-hashiru"
+title = "ねこ、走る。"
+shortDescription = "ねこが走ってジャンプするランゲーム"
+category = "game"
+tags = ["Windowsゲーム"]
+createdAt = "2020-07-01"
+
+[[images]]
+src = "./0_title.png"
+alt = "タイトル画面"
+
+[[images]]
+src = "./1_game.png"
+alt = "プレイ画面"
+
+[[sections]]
+title = "概要"
+body = "次々に現れる障害物をジャンプで避けて走り続けるシンプルなランゲーム。"
+
+[[sections]]
+title = "使用技術"
+body = "C++ / DirectX 11"

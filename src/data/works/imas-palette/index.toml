@@ -1,0 +1,39 @@
+id = "imas-palette"
+title = "im@s-palette"
+shortDescription = "アイマス色検索"
+category = "web"
+tags = ["im@s", "Webアプリ", "便利ツール", "Next.js",  "im@sparql"]
+createdAt = "2021-07-01"
+
+[[images]]
+src = "./0_logo.png"
+alt = "ロゴ画像"
+
+[[images]]
+src = "./1_top.png"
+alt = "アプリページ"
+
+[[sections]]
+title = "概要"
+body = "アイドルマスターシリーズに登場する、アイドル・ユニットのイメージカラーが検索できる Web アプリ。"
+
+[[sections]]
+title = "特徴"
+body = """
+名前の一部や色味からイメージカラーを検索し、カラーコードをコピーすることができます。
+よく使うカラーを Keep しておくことも。
+"""
+
+[[sections]]
+title = "使用技術"
+body = "Next.js / TypeScript / Tailwind CSS / im@sparql (SPARQL) / Jest / Playwright / Vercel / GitHub Actions"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/imas-palette"
+label = "GitHub"
+
+[[links]]
+icon = "link"
+href = "https://imas-palette.vercel.app/"
+label = "im@s-palette"

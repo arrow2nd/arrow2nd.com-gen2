@@ -1,0 +1,41 @@
+id = "imas-artwork"
+title = "imas-artwork-search"
+shortDescription = "アイマス CD アートワーク検索"
+category = "web"
+tags = ["im@s", "Webサイト", "便利ツール"]
+createdAt = "2022-04-01"
+
+[[images]]
+src = "./0_result.png"
+alt = "アプリページ"
+
+[[sections]]
+title = "概要"
+body = "アイマス CD のアートワーク情報を検索できる Web アプリ・Web API"
+
+[[sections]]
+title = "ひとこと"
+body = "CDを取り込む際、アートワークをググって持ってくるのが面倒だったのでつくりました。"
+
+[[sections]]
+title = "使用技術（フロントエンド）"
+body = "SolidJS / TypeScript / Milligram / Cloudflare Pages / Vite"
+
+[[sections]]
+title = "使用技術（バックエンド）"
+body = "Deno / TypeScript / hono / MongoDB Atlas / Deno Deploy / GitHub Actions"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/imas-artwork-search"
+label = "GitHub (Web)"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/imas-artwork-api"
+label = "GitHub (API)"
+
+[[links]]
+icon = "link"
+href = "https://imas-artwork-search.pages.dev/"
+label = "アートワーク検索"

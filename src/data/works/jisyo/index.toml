@@ -1,0 +1,23 @@
+id = "jisyo"
+title = "jisyo"
+shortDescription = "SKK 辞書マネージャ"
+category = "tool"
+tags = ["CLI", "SKK", "便利ツール"]
+createdAt = "2023/09/01"
+
+[[images]]
+src = "./0_run.png"
+alt = "実行イメージ"
+
+[[sections]]
+title = "概要"
+body = "SKKの辞書の管理・一括ダウンロードを行なうCLIツール。"
+
+[[sections]]
+title = "ひとこと"
+body = "コマンド一発で辞書の更新ができたら嬉しいな〜と思ったのでつくりました。"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/jisyo"
+label = "GitHub"

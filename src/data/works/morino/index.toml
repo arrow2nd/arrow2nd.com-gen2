@@ -1,0 +1,44 @@
+id = "morino"
+title = "morino"
+shortDescription = "凛世さんのお誕生日までをカウントダウン"
+category = "web"
+tags = ["im@s", "シャニマス", "Webサイト"]
+createdAt = "2021-10-01"
+
+[[images]]
+src = "./0_top.png"
+alt = "カウントダウンページ"
+
+[[images]]
+src = "./1_birthday.png"
+alt = "誕生日ページ"
+
+[[images]]
+src = "./2_share.png"
+alt = "SNSでの共有例"
+
+[[sections]]
+title = "概要"
+body = "アイドルマスターシャイニーカラーズに登場するアイドル、杜野凛世さんの「お誕生日までの秒数」をカウントダウンするサイト。"
+
+[[sections]]
+title = "特徴"
+body = "動的に生成された OGP 画像とともに、残り秒数を SNS で共有することができます。"
+
+[[sections]]
+title = "ひとこと"
+body = "せっかくのお誕生日、何か作りたいな……って思っていたらなんかできていました。Deno Deploy を使ってみたかったというのもあります。"
+
+[[sections]]
+title = "使用技術"
+body = "HTML / CSS / Deno / esbuild / party.js / Deno Deploy / Cloudinary / Github Actions"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/morino"
+label = "GitHub"
+
+[[links]]
+icon = "link"
+href = "https://morino.deno.dev/"
+label = "カウントダウンをみる"

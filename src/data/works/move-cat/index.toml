@@ -1,0 +1,27 @@
+id = "move-cat"
+title = "うごく！ねこのようなもの。"
+shortDescription = "やわらかタッチの動く ねこのスタンプ"
+category = "sticker"
+tags = ["ねこのようなもの"]
+createdAt = "2019/06/21"
+
+[[images]]
+src = "./0.png"
+alt = "うごく！ねこのようなもの。のスタンプ"
+
+[[images]]
+src = "./1.png"
+alt = "うごく！ねこのようなもの。のスタンプ"
+
+[[sections]]
+title = "概要"
+body = "クレヨン風タッチでわちゃわちゃ動く ねこのスタンプです。"
+
+[[sections]]
+title = "ひとこと"
+body = "思いのほかうごきます"
+
+[[links]]
+icon = "line-line"
+href = "https://store.line.me/stickershop/product/7982358"
+label = "LINE STORE"

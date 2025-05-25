@@ -1,0 +1,40 @@
+id = "sb4-ext"
+title = "sb4-extension"
+shortDescription = "SmileBASIC4 の VSCode 拡張"
+category = "tool"
+tags = ["VSCode拡張", "便利ツール", "プチコン4"]
+createdAt = "2020-08-01"
+
+[[images]]
+src = "./0_highlight.png"
+alt = "構文ハイライトのデモ"
+
+[[images]]
+src = "./1_hover.png"
+alt = "ホバーのデモ"
+
+[[images]]
+src = "./2_cmp.png"
+alt = "入力補完のデモ"
+
+[[sections]]
+title = "概要"
+body = "SmileBASIC4（プチコン4）のコードを VSCode でいい感じに編集するための拡張機能。"
+
+[[sections]]
+title = "特徴"
+body = "構文ハイライト、変数・関数の入力補完、コメントのホバー表示、スニペットに対応しています。"
+
+[[sections]]
+title = "使用技術"
+body = "Node.js / TypeScript"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/sb4-extension"
+label = "GitHub"
+
+[[links]]
+icon = "download-line"
+href = "https://marketplace.visualstudio.com/items?itemName=arrow2nd.sb4-extension"
+label = "VSCodeに追加"

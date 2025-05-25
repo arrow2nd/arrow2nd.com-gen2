@@ -1,0 +1,27 @@
+id = "omrk"
+title = "omkr-radio"
+shortDescription = "オモコロラジオの非公式 Podcast フィード"
+category = "tool"
+tags = ["ポッドキャスト", "オモコロ"]
+createdAt = "2021/09/15"
+
+[[images]]
+src = "./0_github.png"
+alt = "GitHubページ"
+
+[[sections]]
+title = "概要"
+body = "Web メディア「オモコロ」で配信中のラジオの JSON データ及び、非公式 Podcast フィード。"
+
+[[sections]]
+title = "特徴"
+body = "定期的に RSS フィードを取得・解析し、ほぼ自動で更新しています。"
+
+[[sections]]
+title = "使用技術"
+body = "Deno / TypeScript / GitHub Actions"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/omkr-radio"
+label = "GitHub"

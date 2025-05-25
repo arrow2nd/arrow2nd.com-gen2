@@ -1,0 +1,36 @@
+id = "idol-badge"
+title = "idol-badge-generator"
+shortDescription = "アイドルバッジジェネレータ"
+category = "web"
+tags = ["im@s", "Webアプリ", "便利ツール", "Next.js", "im@sparql"]
+createdAt = "2021-08-01"
+
+[[images]]
+src = "./0_top.png"
+alt = "アプリページ"
+
+[[images]]
+src = "./1_example.png"
+alt = "バッジの使用例"
+
+[[sections]]
+title = "概要"
+body = "アイドルマスターシリーズに登場するアイドルの「バッジ」をつくることができる Web アプリ。"
+
+[[sections]]
+title = "ひとこと"
+body = "README に貼りたくなったのでつくりました。"
+
+[[sections]]
+title = "使用技術"
+body = "Next.js / Deno / TypeScript / Tailwind CSS / im@sparql (SPARQL) / shields.io / Vercel / GitHub Actions"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/idol-badge-generator"
+label = "GitHub"
+
+[[links]]
+icon = "link"
+href = "https://idol-badge-generator.vercel.app/"
+label = "バッジをつくる"

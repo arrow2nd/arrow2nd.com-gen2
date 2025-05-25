@@ -1,0 +1,31 @@
+id = "twnyan"
+title = "twnyan"
+shortDescription = "CLI な Twitter クライアント"
+category = "tool"
+tags = ["Twitterクライアント", "TUI", "Go"]
+createdAt = "2020-11-01"
+
+[[images]]
+src = "./0_timeline.png"
+alt = "タイムラインを表示しているところ"
+
+[[sections]]
+title = "概要"
+body = "ターミナル上で動作するシンプルなTwitterクライアント。"
+
+[[sections]]
+title = "特徴"
+body = "ツイートなどの基本的な機能に加えて、マルチアカウント管理や、1分遅れのタイムラインをストリーミングする「疑似 UserStream モード」を搭載しています。"
+
+[[sections]]
+title = "にゃーん"
+body = "コマンドラインで \" twnyan tw \" と打ち込むだけで「にゃーん」とつぶやけます。"
+
+[[sections]]
+title = "使用技術"
+body = "Go / Twitter API v1.1 / GoReleaser / GitHub Actions"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/twnyan"
+label = "GitHub"

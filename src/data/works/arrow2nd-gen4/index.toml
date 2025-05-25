@@ -1,0 +1,42 @@
+id = "arrow2nd-gen4"
+title = "www.arrow2nd.com (Gen 4)"
+shortDescription = "ポートフォリオサイトのようなもの (4代目)"
+category = "web"
+tags = ["Webサイト", "Next.js"]
+createdAt = "2021-12-01"
+
+[[images]]
+src = "./0_top.png"
+alt = "トップページ"
+
+[[images]]
+src = "./1_about.png"
+alt = "aboutページ"
+
+[[images]]
+src = "./2_works.png"
+alt = "worksページ"
+
+[[images]]
+src = "./3_sp.png"
+alt = "スマートフォンで表示したところ"
+
+[[sections]]
+title = "概要"
+body = "つくったものをまとめた、ポートフォリオのようなサイト。"
+
+[[sections]]
+title = "ひとこと"
+body = """
+Gatsby から Next.js へ移行したほか、ヘッドレス CMS を導入しました！
+いわゆる Jamstack な構成になっています。
+"""
+
+[[sections]]
+title = "使用技術"
+body = "Next.js / TypeScript / Tailwind CSS / Framer Motion / plaiceholder / microCMS / Vercel / Playwright / GitHub Actions"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/arrow2nd.com-gen1"
+label = "GitHub"

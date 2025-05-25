@@ -1,0 +1,35 @@
+id = "arrow2nd-gen3"
+title = "arrow2nd.com (Gen 3)"
+shortDescription = "ポートフォリオっぽいサイト (3代目)"
+category = "web"
+tags = ["Webサイト", "Gatsby"]
+createdAt = "2021-07-01"
+
+[[images]]
+src = "./0_top.png"
+alt = "トップページ"
+
+[[images]]
+src = "./1_about.png"
+alt = "aboutページ"
+
+[[images]]
+src = "./2_works.png"
+alt = "worksページ"
+
+[[sections]]
+title = "概要"
+body = "今までにつくったものをまとめた、ポートフォリオ的なサイト。"
+
+[[sections]]
+title = "ひとこと"
+body = "はじめてドメインを取りました 🎉記事ページは JSON から自動生成しています。"
+
+[[sections]]
+title = "使用技術"
+body = "Gatsby / TypeScript / Tailwind CSS / Font Awesome / GitHub Actions / GitHub Pages"
+
+[[links]]
+icon = "github-line"
+href = "https://github.com/arrow2nd/arrow2nd.github.io-gen3"
+label = "GitHub"

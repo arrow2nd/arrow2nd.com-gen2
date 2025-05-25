@@ -1,0 +1,27 @@
+id = "honorific-cat"
+title = "敬語っぽいねこのようなもの。"
+shortDescription = "敬語成分多めな ねこのスタンプ"
+category = "sticker"
+tags = ["ねこのようなもの"]
+createdAt = "2021/02/26"
+
+[[images]]
+src = "./0.png"
+alt = "敬語っぽいねこのようなもの。のスタンプ"
+
+[[images]]
+src = "./1.png"
+alt = "敬語っぽいねこのようなもの。のスタンプ"
+
+[[sections]]
+title = "概要"
+body = "丁寧な口調で使いやすい、オールラウンダーな ねこのスタンプです。"
+
+[[sections]]
+title = "ひとこと"
+body = "硬すぎず、砕けすぎない。ちょうどいい塩梅に仕上がりました。"
+
+[[links]]
+icon = "line-line"
+href = "https://store.line.me/stickershop/product/14523908"
+label = "LINE STORE"
