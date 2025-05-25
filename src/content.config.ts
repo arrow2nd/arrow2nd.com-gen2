@@ -33,12 +33,12 @@ const works = defineCollection({
     const files = import.meta.glob<string>("src/data/works/**/*.toml", {
       query: "?raw",
       import: "default",
+      eager: true,
     });
 
     const entries = [];
 
-    for (const [_, loader] of Object.entries(files)) {
-      const content = await loader();
+    for (const [_, content] of Object.entries(files)) {
       const parsed = parse(content);
       entries.push(parsed);
     }
