@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 
 export const GET: APIRoute = async ({}) => {
   const aboutEntries = await getCollection("about");
+  const careersEntries = await getCollection("careers");
   const worksEntries = await getCollection("works");
 
   let output = `ここはarrow2nd (あろー)のポートフォリオサイトです。
@@ -12,31 +13,42 @@ export const GET: APIRoute = async ({}) => {
 
 `;
 
-  // Process "about" entries
   if (aboutEntries.length > 0 && Array.isArray(aboutEntries[0].data)) {
-    aboutEntries[0].data.forEach((section: any) => {
+    for (const section of aboutEntries[0].data) {
       output += `## ${section.title}\n`;
-      output += `${section.body}\n\n`; // Double newline for paragraph break
-    });
+      output += `${section.body}\n\n`;
+    }
   }
 
-  output += "\n---\n\n"; // Markdown horizontal rule between About and Works
+  output += "# Careers\n\n";
+
+  if (careersEntries.length > 0) {
+    for (const careers of careersEntries) {
+      for (const career of careers.data) {
+        if (career.title) {
+          output += `## ${career.title}\n`;
+        }
+
+        output += `- ${career.jobName}\n`;
+        output += `- 期間: ${career.employmentPeriod}\n\n`;
+      }
+    }
+  }
 
   output += "# Works\n\n";
 
-  // Process "works" entries
   if (worksEntries.length > 0) {
-    worksEntries.forEach((work: any, index: number) => {
+    for (const work of worksEntries) {
       output += `## ${work.data.title}\n`;
-      output += `${work.data.shortDescription}\n\n`;
+      output += `${work.data.shortDescription}\n`;
 
       if (work.data.sections && Array.isArray(work.data.sections)) {
-        work.data.sections.forEach((section: any) => {
+        for (const section of work.data.sections) {
           if (section.title) {
             output += `### ${section.title}\n`;
           }
-          output += `${section.body}\n\n`;
-        });
+          output += `${section.body.trim()}\n`;
+        }
       }
 
       if (
@@ -45,24 +57,18 @@ export const GET: APIRoute = async ({}) => {
         work.data.links.length > 0
       ) {
         output += "### Links\n";
-        work.data.links.forEach((link: any) => {
+        for (const link of work.data.links) {
           output += `- [${link.label}](${link.href})\n`;
-        });
-        output += "\n"; // Add a newline after the list for spacing
+        }
       }
 
-      // Add a separator between work items, but not after the last one
-      if (index < worksEntries.length - 1) {
-        output += "\n---\n\n";
-      }
-    });
+      output += "\n";
+    }
   }
 
   return new Response(output, {
     status: 200,
     headers: {
-      // As per instruction, keeping text/plain due to .txt extension,
-      // but content is Markdown.
       "Content-Type": "text/plain; charset=utf-8",
     },
   });
