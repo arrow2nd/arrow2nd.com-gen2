@@ -20,7 +20,7 @@
     "@tailwindcss/vite": "^4.1.7",
     "astro": "^5.8.0",
     "astro-icon": "^1.1.5",
-    "svgo": "^2.8.0",
+    "svgo": "^4.0.0",
     "swiper": "^11.2.8",
     "tailwindcss": "^4.1.7",
     "toml": "^3.0.0",
