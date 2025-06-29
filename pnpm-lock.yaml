@@ -43,7 +43,7 @@ importers:
         version: 4.0.0
       swiper:
         specifier: ^11.2.8
-        version: 11.2.9
+        version: 11.2.10
       tailwindcss:
         specifier: ^4.1.7
         version: 4.1.11
@@ -2399,8 +2399,8 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  swiper@11.2.9:
-    resolution: {integrity: sha512-X4lP396wfb85t5GclSlXmZyeDgcV66JK9+HDfqlk+8wJ5Bp85ZMv2fxu9psulsm22dLQxbnN4kADxK8jXTnSuw==}
+  swiper@11.2.10:
+    resolution: {integrity: sha512-RMeVUUjTQH+6N3ckimK93oxz6Sn5la4aDlgPzB+rBrG/smPdCTicXyhxa+woIpopz+jewEloiEE3lKo1h9w2YQ==}
     engines: {node: '>= 4.7.0'}
 
   tailwindcss@4.1.11:
@@ -5566,7 +5566,7 @@ snapshots:
       picocolors: 1.1.1
       sax: 1.4.1
 
-  swiper@11.2.9: {}
+  swiper@11.2.10: {}
 
   tailwindcss@4.1.11: {}
 
