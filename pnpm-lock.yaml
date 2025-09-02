@@ -25,7 +25,7 @@ importers:
         version: 1.2.5
       '@pagefind/default-ui':
         specifier: ^1.3.0
-        version: 1.3.0
+        version: 1.4.0
       '@playform/compress':
         specifier: ^0.2.0
         version: 0.2.0(@types/node@24.3.0)(@vercel/functions@2.2.13)(jiti@2.5.1)(rollup@4.50.0)(typescript@5.9.2)(yaml@2.6.0)
@@ -628,8 +628,8 @@ packages:
     cpu: [x64]
     os: [darwin]
 
-  '@pagefind/default-ui@1.3.0':
-    resolution: {integrity: sha512-CGKT9ccd3+oRK6STXGgfH+m0DbOKayX6QGlq38TfE1ZfUcPc5+ulTuzDbZUnMo+bubsEOIypm4Pl2iEyzZ1cNg==}
+  '@pagefind/default-ui@1.4.0':
+    resolution: {integrity: sha512-wie82VWn3cnGEdIjh4YwNESyS1G6vRHwL6cNjy9CFgNnWW/PGRjsLq300xjVH5sfPFK3iK36UxvIBymtQIEiSQ==}
 
   '@pagefind/linux-arm64@1.3.0':
     resolution: {integrity: sha512-8lsxNAiBRUk72JvetSBXs4WRpYrQrVJXjlRRnOL6UCdBN9Nlsz0t7hWstRk36+JqHpGWOKYiuHLzGYqYAqoOnQ==}
@@ -3427,7 +3427,7 @@ snapshots:
   '@pagefind/darwin-x64@1.3.0':
     optional: true
 
-  '@pagefind/default-ui@1.3.0': {}
+  '@pagefind/default-ui@1.4.0': {}
 
   '@pagefind/linux-arm64@1.3.0':
     optional: true
