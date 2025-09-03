@@ -26,7 +26,7 @@ body = """
 
 [[sections]]
 title = "使用技術"
-body = "Bun / Astro / React / Tailwind CSS / Cloudflare Pages / GitHub Actions / OpenAI API / Figma"
+body = "Bun / Astro / React / Tailwind CSS / Cloudflare Workers / GitHub Actions / OpenAI API / Figma"
 
 [[links]]
 icon = "link"
