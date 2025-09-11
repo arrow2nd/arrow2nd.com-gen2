@@ -11,5 +11,9 @@ id = "tool"
 name = "tool"
 
 [[categories]]
+id = "vrc"
+name = "vrc"
+
+[[categories]]
 id = "sticker"
 name = "sticker"

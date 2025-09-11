@@ -1,0 +1,26 @@
+id = "tiny-toycamera"
+title = "ちっちゃいトイカメラ"
+shortDescription = "撮影できるVRC向けトイカメラ"
+category = "vrc"
+tags = ["VRChat"]
+createdAt = "2025-09-05"
+
+[[images]]
+src = "./0_thumbnail.png"
+alt = "商品サムネイル"
+
+[[sections]]
+title = "概要"
+body = "実際に撮影できる、VRCアバター向けトイカメラ。"
+
+[[sections]]
+title = "ひとこと"
+body = """
+ギミックの実装とサムネのデザインを担当しました。
+VR空間でも「写ってるかわからない」撮影体験がしたかったので、モデラーの友人と一緒につくりました。
+"""
+
+[[links]]
+icon = "link"
+href = "https://booth.pm/ja/items/7371711"
+label = "BOOTH"
