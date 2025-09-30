@@ -19,7 +19,7 @@ importers:
         version: 8.2.7(astro@5.13.6(@types/node@24.3.1)(@vercel/functions@2.2.13)(jiti@2.5.1)(lightningcss@1.30.1)(rollup@4.50.1)(terser@5.42.0)(typescript@5.9.2)(yaml@2.6.0))(rollup@4.50.1)
       '@fontsource/zen-maru-gothic':
         specifier: ^5.2.5
-        version: 5.2.7
+        version: 5.2.8
       '@iconify-json/ri':
         specifier: ^1.2.5
         version: 1.2.5
@@ -321,8 +321,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fontsource/zen-maru-gothic@5.2.7':
-    resolution: {integrity: sha512-UC4DlBiObj+/FN6oaWlVUuxEuxT+hd6kQ0m6ahD7QMJOhtXA1S5yqmTJKpCBUqdTdKGakE4/CUbe4xjYn+y6aA==}
+  '@fontsource/zen-maru-gothic@5.2.8':
+    resolution: {integrity: sha512-6RkH33+rgEJy1hkUdDAf+3PyQ7oUjX3vj7cekmfx/bT/9BEPd07FqrjcGBQDe4uWmUebEKuIZep3phDjsnJ6vA==}
 
   '@iconify-json/ri@1.2.5':
     resolution: {integrity: sha512-kWGimOXMZrlYusjBKKXYOWcKhbOHusFsmrmRGmjS7rH0BpML5A9/fy8KHZqFOwZfC4M6amObQYbh8BqO5cMC3w==}
@@ -3161,7 +3161,7 @@ snapshots:
   '@esbuild/win32-x64@0.25.9':
     optional: true
 
-  '@fontsource/zen-maru-gothic@5.2.7': {}
+  '@fontsource/zen-maru-gothic@5.2.8': {}
 
   '@iconify-json/ri@1.2.5':
     dependencies:
