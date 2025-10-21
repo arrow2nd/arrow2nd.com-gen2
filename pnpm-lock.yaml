@@ -43,7 +43,7 @@ importers:
         version: 4.0.0
       swiper:
         specifier: ^12.0.0
-        version: 12.0.2
+        version: 12.0.3
       tailwindcss:
         specifier: ^4.1.12
         version: 4.1.14
@@ -2407,6 +2407,7 @@ packages:
   sitemap@8.0.0:
     resolution: {integrity: sha512-+AbdxhM9kJsHtruUF39bwS/B0Fytw6Fr1o4ZAIAEqA6cke2xcoO2GleBw9Zw7nRzILVEgz7zBM5GiTJjie1G9A==}
     engines: {node: '>=14.0.0', npm: '>=6.0.0'}
+    deprecated: 'SECURITY: Multiple vulnerabilities fixed in 8.0.1 (XML injection, path traversal, command injection, protocol injection). Upgrade immediately: npm install sitemap@8.0.1'
     hasBin: true
 
   smol-toml@1.4.2:
@@ -2466,8 +2467,8 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  swiper@12.0.2:
-    resolution: {integrity: sha512-y8F6fDGXmTVVgwqJj6I00l4FdGuhpFJn0U/9Ucn1MwWOw3NdLV8aH88pZOjyhBgU/6PyBlUx+JuAQ5KMWz906Q==}
+  swiper@12.0.3:
+    resolution: {integrity: sha512-BHd6U1VPEIksrXlyXjMmRWO0onmdNPaTAFduzqR3pgjvi7KfmUCAm/0cj49u2D7B0zNjMw02TSeXfinC1hDCXg==}
     engines: {node: '>= 4.7.0'}
 
   tailwindcss@4.1.14:
@@ -5676,7 +5677,7 @@ snapshots:
       picocolors: 1.1.1
       sax: 1.4.1
 
-  swiper@12.0.2: {}
+  swiper@12.0.3: {}
 
   tailwindcss@4.1.14: {}
 
