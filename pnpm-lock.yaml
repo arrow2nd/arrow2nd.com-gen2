@@ -22,7 +22,7 @@ importers:
         version: 5.2.8
       '@iconify-json/ri':
         specifier: ^1.2.5
-        version: 1.2.6
+        version: 1.2.7
       '@pagefind/default-ui':
         specifier: ^1.3.0
         version: 1.4.0
@@ -326,8 +326,8 @@ packages:
   '@fontsource/zen-maru-gothic@5.2.8':
     resolution: {integrity: sha512-6RkH33+rgEJy1hkUdDAf+3PyQ7oUjX3vj7cekmfx/bT/9BEPd07FqrjcGBQDe4uWmUebEKuIZep3phDjsnJ6vA==}
 
-  '@iconify-json/ri@1.2.6':
-    resolution: {integrity: sha512-tGXRmXtb8oFu8DNg9MsS1pywKFgs9QZ4U6LBzUamBHaw3ePSiPd7ouE64gzHzfEcR16hgVaXoUa+XxD3BB0XOg==}
+  '@iconify-json/ri@1.2.7':
+    resolution: {integrity: sha512-j/Fkb8GlWY5y/zLj1BGxWRtDzuJFrI7562zLw+iQVEykieBgew43+r8qAvtSajvb75MfUIHjsNOYQPRD8FfLfw==}
 
   '@iconify/tools@4.0.7':
     resolution: {integrity: sha512-zOJxKIfZn96ZRGGvIWzDRLD9vb2CsxjcLuM+QIdvwWbv6SWhm49gECzUnd4d2P0sq9sfodT7yCNobWK8nvavxQ==}
@@ -2885,6 +2885,7 @@ packages:
   whatwg-encoding@3.1.1:
     resolution: {integrity: sha512-6qN4hJdMwfYBtE3YBTTHhoeuUrDBPZmbQaxWAqSALV/MeEnR5z1xd8UKud2RAkFoPkmB+hli1TZSnyi84xz1vQ==}
     engines: {node: '>=18'}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-mimetype@4.0.0:
     resolution: {integrity: sha512-QaKxh0eNIi2mE9p2vEdzfagOKHCcj1pJ56EEHGQOVxp8r9/iszLUUV7v89x9O1p/T+NlTM5W7jW6+cz4Fq1YVg==}
@@ -3241,7 +3242,7 @@ snapshots:
 
   '@fontsource/zen-maru-gothic@5.2.8': {}
 
-  '@iconify-json/ri@1.2.6':
+  '@iconify-json/ri@1.2.7':
     dependencies:
       '@iconify/types': 2.0.0
 
